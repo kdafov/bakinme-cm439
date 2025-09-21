@@ -4,8 +4,8 @@ import BrandHeader from "./BrandHeader";
 import CategoriesStrip from "./CategoriesStrip";
 import MenuSection from "./MenuSection";
 import MenuItem from "./MenuItem";
-import { menu_EN } from "@/data/menu_EN";
-import { menu_ES } from "@/data/menu_es";
+import { menu_EN } from "../data/menu_en";
+import { menu_ES } from "../data/menu_es";
 import SocialFooter from "./Socials";
 
 interface MenuItemData {
