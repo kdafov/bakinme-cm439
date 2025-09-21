@@ -1,0 +1,68 @@
+<!-- MILKSHAKE -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="titleShake descShake">
+  <title id="titleShake">Milkshake Icon</title>
+  <desc id="descShake">A tall milkshake glass with whipped cream, straw, and sprinkles.</desc>
+  <defs>
+    <linearGradient id="shake-glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EAF2FF"/>
+      <stop offset="100%" stop-color="#C9D8F2"/>
+    </linearGradient>
+    <linearGradient id="shake-drink" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFD3E1"/>
+      <stop offset="100%" stop-color="#FF9EC1"/>
+    </linearGradient>
+    <linearGradient id="shake-metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#DDE2EA"/>
+      <stop offset="100%" stop-color="#B6C0CF"/>
+    </linearGradient>
+    <linearGradient id="shake-straw" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF6A7A"/>
+      <stop offset="100%" stop-color="#E21D3A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- base shadow -->
+  <ellipse cx="128" cy="214" rx="60" ry="14" fill="rgba(0,0,0,0.15)"/>
+
+  <!-- straw -->
+  <g transform="translate(0,-4)">
+    <path d="M158 28 L182 76" stroke="url(#shake-straw)" stroke-width="10" stroke-linecap="round"/>
+    <path d="M182 76 L170 142" stroke="url(#shake-straw)" stroke-width="10" stroke-linecap="round" opacity="0.9"/>
+    <!-- white spiral -->
+    <path d="M158 28 L182 76" stroke="white" stroke-opacity="0.5" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 10"/>
+    <path d="M182 76 L170 142" stroke="white" stroke-opacity="0.5" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 10"/>
+  </g>
+
+  <!-- glass -->
+  <g>
+    <!-- bowl -->
+    <path d="M84 64 C84 48 172 48 172 64 C172 80 164 120 150 140 C140 154 136 168 136 184 L120 184 C120 168 116 154 106 140 C92 120 84 80 84 64Z" fill="url(#shake-glass)"/>
+    <!-- drink fill -->
+    <path d="M92 70 C92 60 164 60 164 70 C164 96 154 122 144 136 C136 148 132 162 132 178 L124 178 C124 162 120 148 112 136 C102 122 92 96 92 70Z" fill="url(#shake-drink)"/>
+    <!-- rim -->
+    <ellipse cx="128" cy="64" rx="48" ry="14" fill="url(#shake-metal)" />
+    <ellipse cx="128" cy="64" rx="46" ry="11" fill="#FFFFFF" opacity="0.7"/>
+
+    <!-- pedestal -->
+    <rect x="118" y="184" width="20" height="14" rx="4" fill="url(#shake-metal)"/>
+    <ellipse cx="128" cy="204" rx="34" ry="10" fill="url(#shake-metal)"/>
+    <ellipse cx="128" cy="204" rx="30" ry="6" fill="#FFFFFF" opacity="0.6"/>
+
+    <!-- highlights -->
+    <path d="M102 88 C102 120 102 120 102 120" stroke="white" stroke-opacity="0.55" stroke-width="6" stroke-linecap="round"/>
+    <path d="M150 86 C150 118 150 118 150 118" stroke="white" stroke-opacity="0.35" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <!-- whipped cream -->
+  <g>
+    <path d="M92 52 C102 40 120 36 132 40 C142 28 164 36 166 50 C176 52 178 64 170 70 C166 84 140 86 124 82 C106 84 94 76 98 64 C92 62 88 58 92 52Z" fill="#FFF7FB" stroke="rgba(0,0,0,0.08)" stroke-width="2"/>
+    <!-- sprinkles -->
+    <g stroke-linecap="round" stroke-width="4">
+      <path d="M120 50 L124 50" stroke="#FF6B6B"/>
+      <path d="M138 54 L142 54" stroke="#6BCB77"/>
+      <path d="M110 62 L114 62" stroke="#4D96FF"/>
+      <path d="M152 62 L156 62" stroke="#FFD93D"/>
+      <path d="M132 70 L136 70" stroke="#845EC2"/>
+    </g>
+  </g>
+</svg>
