@@ -43,13 +43,13 @@ export default function SocialFooter() {
   ];
 
   return (
-    <div className="bg-gradient-to-br from-[#F7C884]/10 to-[#DC7129]/10 border-t border-[#DC7129]/20 py-8">
+    <div className="bg-gradient-to-r from-[#F7C884]/35 to-[#DC7129]/45 border-t border-[#DC7129]/20 py-8">
       <div className="px-6 text-center">
         <h3 className="text-xl font-bold text-[#462305] mb-2 pacifico-regular">
           {t("findUs")}
         </h3>
 
-        <p className="text-gray-600 text-sm mb-6">{t("followUs")}</p>
+        <p className="text-black text-sm mb-6">{t("followUs")}</p>
 
         <div className="flex justify-center space-x-6">
           {socialLinks.map((social) => {
@@ -70,7 +70,7 @@ export default function SocialFooter() {
         </div>
 
         <div className="mt-6 pt-4 border-t border-[#DC7129]/10">
-          <p className="text-xs text-gray-500">© 2025 Bakin' Me Crazy</p>
+          <p className="text-xs text-black">© 2025 Bakin' Me Crazy</p>
         </div>
       </div>
     </div>

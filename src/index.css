@@ -119,6 +119,8 @@
   }
 }
 
+/* CUSTOM GLOBALS */
+
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -126,7 +128,10 @@
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+.text-shadow-brand{ text-shadow: 3px 2px 0 #462305, 0 8px 18px rgba(70,35,5,.35); }
+.text-shadow-brand-sub{ text-shadow: 0 1px 0 #462305, 0 4px 10px rgba(70,35,5,.95); }
 
+/* CUSTOM STYLES */
 .pacifico-regular {
   font-family: "Pacifico", cursive;
   font-weight: 200;

@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Search, X } from "lucide-react";
 
@@ -23,7 +23,47 @@ export default function CategoriesStrip({
   const { t } = useTranslation();
   const [isSearchMode, setIsSearchMode] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [lastClickedCategory, setLastClickedCategory] = useState<string | null>(
+    null
+  );
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  // Center the active category using horizontal scroll
+  useEffect(() => {
+    if (isSearchMode) return;
+
+    // Don't auto-scroll if this was triggered by a user click
+    if (lastClickedCategory === activeCategory) {
+      setLastClickedCategory(null);
+      return;
+    }
+
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    const activeButton = container.querySelector<HTMLElement>(
+      `[data-category="${activeCategory}"]`
+    );
+
+    if (activeButton) {
+      const containerWidth = container.clientWidth;
+      const maxScroll = container.scrollWidth - containerWidth;
+      const buttonCenter =
+        activeButton.offsetLeft + activeButton.offsetWidth / 2;
+      const target = Math.max(
+        0,
+        Math.min(buttonCenter - containerWidth / 2, maxScroll)
+      );
+
+      // Only scroll if significantly different to avoid micro-adjustments
+      if (Math.abs(container.scrollLeft - target) > 20) {
+        container.scrollTo({
+          left: target,
+          behavior: "smooth",
+        });
+      }
+    }
+  }, [activeCategory, isSearchMode, lastClickedCategory]);
 
   const handleSearchToggle = () => {
     setIsSearchMode(!isSearchMode);
@@ -45,24 +85,12 @@ export default function CategoriesStrip({
   };
 
   const handleCategoryClick = (categoryId: string) => {
+    setLastClickedCategory(categoryId);
     onCategoryClick(categoryId);
-
-    setTimeout(() => {
-      const activeButton = document.querySelector(
-        `[data-category="${categoryId}"]`
-      );
-      if (activeButton && scrollContainerRef.current) {
-        activeButton.scrollIntoView({
-          behavior: "smooth",
-          block: "nearest",
-          inline: "center",
-        });
-      }
-    }, 100);
   };
 
   return (
-    <div className="flex-shrink-0 bg-gradient-to-r from-[#F7C884]/15 to-[#DC7129]/15 py-3">
+    <div className="flex-shrink-0 bg-gradient-to-r from-[#F7C884]/35 to-[#DC7129]/45 py-3 border border-b-[#DC7129]/80">
       <div className="px-4">
         <div className="flex items-center space-x-4">
           <button
@@ -95,7 +123,7 @@ export default function CategoriesStrip({
             ) : (
               <div
                 ref={scrollContainerRef}
-                className="overflow-x-auto scrollbar-hide scroll-smooth"
+                className="overflow-x-auto scrollbar-hide"
               >
                 <div className="flex space-x-1 min-w-max">
                   {categories.map((category) => (
@@ -105,8 +133,8 @@ export default function CategoriesStrip({
                       onClick={() => handleCategoryClick(category.id)}
                       className={`flex-shrink-0 px-4 py-2 text-sm font-medium transition-all duration-300 whitespace-nowrap rounded-full ${
                         activeCategory === category.id
-                          ? "text-[#462305] bg-[#DC7129]/20"
-                          : "text-[#DC7129] hover:bg-[#DC7129]/10"
+                          ? "text-white bg-[#462305] shadow-md"
+                          : "text-[#462305] drop-shadow-lg"
                       }`}
                     >
                       {category.name}

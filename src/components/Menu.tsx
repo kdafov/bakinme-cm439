@@ -1,11 +1,13 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import BrandHeader from "./BrandHeader";
+import Banner from "./Banner";
 import CategoriesStrip from "./CategoriesStrip";
 import MenuSection from "./MenuSection";
 import MenuItem from "./MenuItem";
 import { menu_EN } from "../data/menu_en";
 import { menu_ES } from "../data/menu_es";
+import { menu_DE } from "@/data/menu_de";
+import { menu_IT } from "@/data/menu_it";
 import SocialFooter from "./Socials";
 
 interface MenuItemData {
@@ -18,14 +20,25 @@ interface MenuItemData {
 }
 
 export default function MenuPage() {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState("cookies");
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredItems, setFilteredItems] = useState<MenuItemData[]>([]);
+  const [isInitialized, setIsInitialized] = useState(false);
+  const [isUserScrolling, setIsUserScrolling] = useState(false);
   const menuContentRef = useRef<HTMLDivElement>(null);
 
   const menuData = useMemo(() => {
-    return i18n.language === "es" ? menu_ES : menu_EN;
+    switch (i18n.language) {
+      case "es":
+        return menu_ES;
+      case "de":
+        return menu_DE; // You'll need to import this
+      case "it":
+        return menu_IT; // You'll need to import this
+      default:
+        return menu_EN;
+    }
   }, [i18n.language]);
 
   useEffect(() => {
@@ -49,20 +62,33 @@ export default function MenuPage() {
     }
   }, [searchQuery, menuData]);
 
+  // Delay initialization to prevent auto-scroll on load
   useEffect(() => {
-    if (searchQuery.trim()) return;
+    const timer = setTimeout(() => {
+      setIsInitialized(true);
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    // Only add scroll listener after initialization and when not searching
+    if (!isInitialized || searchQuery.trim()) return;
 
     const handleScroll = () => {
+      // Skip if user is actively scrolling from category click
+      if (isUserScrolling) return;
+
       const sections = menuData.sections;
       let currentSection = sections[0].id;
 
       sections.forEach((section) => {
         const element = document.getElementById(section.id);
-        if (element) {
+        if (element && menuContentRef.current) {
           const rect = element.getBoundingClientRect();
-          const containerRect = menuContentRef.current?.getBoundingClientRect();
+          const containerRect = menuContentRef.current.getBoundingClientRect();
 
-          if (containerRect && rect.top <= containerRect.top + 100) {
+          if (rect.top <= containerRect.top + 150) {
             currentSection = section.id;
           }
         }
@@ -76,9 +102,14 @@ export default function MenuPage() {
       menuContainer.addEventListener("scroll", handleScroll, { passive: true });
       return () => menuContainer.removeEventListener("scroll", handleScroll);
     }
-  }, [searchQuery, menuData]);
+  }, [searchQuery, menuData, isInitialized, isUserScrolling]);
 
   const handleCategoryClick = (categoryId: string) => {
+    // Only allow scrolling after initialization
+    if (!isInitialized) return;
+
+    // Set user scrolling flag to prevent scroll listener interference
+    setIsUserScrolling(true);
     setActiveCategory(categoryId);
     setSearchQuery("");
 
@@ -93,6 +124,11 @@ export default function MenuPage() {
         top: targetScroll,
         behavior: "smooth",
       });
+
+      // Re-enable scroll detection after scroll animation completes
+      setTimeout(() => {
+        setIsUserScrolling(false);
+      }, 600); // Slightly longer than typical smooth scroll duration
     }
   };
 
@@ -101,74 +137,75 @@ export default function MenuPage() {
   };
 
   return (
-    <section className="h-dvh bg-gradient-to-b from-[#F7C884]/10 to-white overflow-hidden">
-      <div className="h-full flex flex-col">
-        <BrandHeader />
+    <section
+      data-menu-section
+      // className="h-dvh bg-gradient-to-b from-[#F7C884]/10 to-white"
+      className="relative h-dvh"
+    >
+      <div
+        className="absolute inset-0 bg-[url('/repeated-background.jpg')] bg-cover bg-center bg-no-repeat opacity-30 pointer-events-none"
+        aria-hidden="true"
+      />
+      <div className="relative h-full">
+        <div className="h-full flex flex-col">
+          <Banner />
 
-        <CategoriesStrip
-          categories={menuData.categories}
-          activeCategory={activeCategory}
-          onCategoryClick={handleCategoryClick}
-          onSearch={handleSearch}
-        />
+          <CategoriesStrip
+            categories={menuData.categories}
+            activeCategory={activeCategory}
+            onCategoryClick={handleCategoryClick}
+            onSearch={handleSearch}
+          />
 
-        <div
-          ref={menuContentRef}
-          className="flex-1 px-6 pb-6 overflow-auto scroll-smooth"
-        >
-          <div className="py-6 space-y-8">
-            {searchQuery.trim() ? (
-              <div>
-                <div className="mb-6">
-                  <h2 className="text-2xl font-bold text-[#462305] pacifico-regular">
-                    {i18n.language === "es"
-                      ? "Resultados de búsqueda"
-                      : "Search Results"}{" "}
-                    ({filteredItems.length})
-                  </h2>
-                  <div className="w-12 h-1 bg-gradient-to-r from-[#DC7129] to-[#F7C884] rounded-full mt-2"></div>
-                </div>
-
-                {filteredItems.length > 0 ? (
-                  <div className="space-y-4">
-                    {filteredItems.map((item) => (
-                      <MenuItem
-                        key={item.id}
-                        image={item.image}
-                        title={item.title}
-                        description={item.description}
-                        price={item.price}
-                      />
-                    ))}
+          <div ref={menuContentRef} className="flex-1 overflow-auto">
+            <div className="pt-6 space-y-8">
+              {searchQuery.trim() ? (
+                <div>
+                  <div className="mb-6">
+                    <h2 className="text-2xl font-bold text-[#462305] pacifico-regular">
+                      {t("searchResults")}
+                    </h2>
+                    <div className="w-12 h-1 bg-gradient-to-r from-[#DC7129] to-[#F7C884] rounded-full mt-2"></div>
                   </div>
-                ) : (
-                  <div className="text-center py-12">
-                    <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#DC7129] to-[#F7C884] flex items-center justify-center opacity-50">
-                      <span className="text-2xl">🔍</span>
+
+                  {filteredItems.length > 0 ? (
+                    <div className="space-y-4">
+                      {filteredItems.map((item) => (
+                        <MenuItem
+                          key={item.id}
+                          image={item.image}
+                          title={item.title}
+                          description={item.description}
+                          price={item.price}
+                        />
+                      ))}
                     </div>
-                    <p className="text-gray-500">
-                      {i18n.language === "es"
-                        ? `No se encontraron elementos para "${searchQuery}"`
-                        : `No items found for "${searchQuery}"`}
-                    </p>
-                  </div>
-                )}
-              </div>
-            ) : (
-              <>
-                {menuData.sections.map((section) => (
-                  <MenuSection
-                    key={section.id}
-                    id={section.id}
-                    title={section.title}
-                    items={section.items}
-                  />
-                ))}
+                  ) : (
+                    <div className="text-center py-12">
+                      <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#DC7129] to-[#F7C884] flex items-center justify-center opacity-50">
+                        <span className="text-2xl">🔍</span>
+                      </div>
+                      <p className="text-gray-500">
+                        {t("noItemsFound", { query: searchQuery })}
+                      </p>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <>
+                  {menuData.sections.map((section) => (
+                    <MenuSection
+                      key={section.id}
+                      id={section.id}
+                      title={section.title}
+                      items={section.items}
+                    />
+                  ))}
 
-                {/* Add SocialFooter here */}
-                <SocialFooter />
-              </>
-            )}
+                  <SocialFooter />
+                </>
+              )}
+            </div>
           </div>
         </div>
       </div>

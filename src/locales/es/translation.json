@@ -1,8 +1,10 @@
 {
   "subtitle": "Donde la pasión se encuentra con la perfección en cada bocado. Delicias artesanales que te volverán deliciosamente loco.",
-  "swipeUpText": "Menu",
-  "xsSubTitle": "donde la pasión se encuentra con la perfección",
-  "searchPlaceholder": "Busca en el menú…",
-  "findUs": "Descubre qué estamos preparando",
-  "followUs": "Síguenos en redes sociales"
+  "swipeUpText": "Menú",
+  "searchPlaceholder": "Buscar en el menú…",
+  "findUs": "Descubre lo que preparamos",
+  "followUs": "Síguenos en redes sociales",
+  "followUsShort": "Síguenos",
+  "searchResults": "Resultados de búsqueda",
+  "noItemsFound": "No se encontraron elementos para"
 }

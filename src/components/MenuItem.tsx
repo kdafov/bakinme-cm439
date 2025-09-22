@@ -12,7 +12,7 @@ export default function MenuItem({
   price,
 }: MenuItemProps) {
   return (
-    <div className="bg-white rounded-xl border border-[#DC7129]/10 hover:border-[#DC7129]/30 transition-all duration-200 hover:shadow-md overflow-hidden">
+    <div className="bg-white rounded-xl border border-[#DC7129]/60 hover:border-[#DC7129]/30 transition-all duration-200 hover:shadow-md overflow-hidden mx-6">
       <div className="flex p-4">
         {/* Image */}
         <div className="flex-shrink-0 w-20 h-20 bg-gradient-to-br from-[#DC7129] to-[#F7C884] rounded-lg overflow-hidden">

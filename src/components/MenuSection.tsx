@@ -18,7 +18,7 @@ export default function MenuSection({ id, title, items }: MenuSectionProps) {
   return (
     <section id={id} className="mb-8">
       {/* Section Title */}
-      <div className="mb-6">
+      <div className="mb-6  mx-6">
         <h2 className="text-2xl font-bold text-[#462305] pacifico-regular">
           {title}
         </h2>
