@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" aria-hidden="true">
+  <!-- Background -->
+  <circle cx="256" cy="256" r="256" fill="#DFD43D"/>
+
+  <!-- Flipped mustard bottle (nozzle down) -->
+  <g transform="translate(256 256)">
+    <!-- Bottle -->
+    <g transform="rotate(170)" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <!-- Bottle body (rounded shoulders) -->
+      <path d="M-78 88 
+               L-78 22 
+               Q -78 4 -58 -8 
+               L-42 -18 
+               L-42 -64 
+               Q -42 -86 -22 -96 
+               L 22 -96 
+               Q 42 -86 42 -64 
+               L 42 -18 
+               L 58 -8 
+               Q 78 4 78 22 
+               L 78 88 
+               Q 0 108 -78 88 Z"/>
+
+      <!-- Nozzle/cap -->
+      <path d="M -22 -96 H 22 L 12 -126 H -12 Z"/>
+
+      <!-- Front label (guide) -->
+      <path d="M-40 18 H40 V64 H-40 Z"/>
+    </g>
+
+    <!-- Drizzle (below nozzle), aligned with bottle tilt -->
+    <g transform="rotate(170)">
+      <!-- Thin stream -->
+      <path d="M 0 -112 C 2 -126 2 -134 0 -144" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+      <!-- Droplets -->
+      <g fill="#FFFFFF" stroke="none">
+        <circle cx="0" cy="-154" r="5"/>
+        <circle cx="6" cy="-168" r="5"/>
+      </g>
+      <!-- Small dollop -->
+      <path d="M 0 -188
+               C 12 -192 14 -204 4 -208
+               C -6 -212 -18 -204 -16 -194
+               C -14 -184 -4 -184 0 -188 Z" fill="#FFFFFF"/>
+    </g>
+  </g>
+
+  <!-- Subtle vignette -->
+  <defs>
+    <radialGradient id="v" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="rgba(0,0,0,0)"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.12)"/>
+    </radialGradient>
+  </defs>
+  <circle cx="256" cy="256" r="256" fill="url(#v)"/>
+</svg>

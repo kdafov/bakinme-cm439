@@ -8,6 +8,7 @@ import { menu_EN } from "../data/menu_en";
 import { menu_ES } from "../data/menu_es";
 import { menu_DE } from "@/data/menu_de";
 import { menu_IT } from "@/data/menu_it";
+import { menu_BG } from "@/data/menu_bg";
 import SocialFooter from "./Socials";
 
 interface MenuItemData {
@@ -33,9 +34,11 @@ export default function MenuPage() {
       case "es":
         return menu_ES;
       case "de":
-        return menu_DE; // You'll need to import this
+        return menu_DE;
       case "it":
-        return menu_IT; // You'll need to import this
+        return menu_IT;
+      case "bg":
+        return menu_BG;
       default:
         return menu_EN;
     }
@@ -143,7 +146,7 @@ export default function MenuPage() {
       className="relative h-dvh"
     >
       <div
-        className="absolute inset-0 bg-[url('/repeated-background.jpg')] bg-cover bg-center bg-no-repeat opacity-30 pointer-events-none"
+        className="absolute inset-0 bg-[url('/home-experience-background.jpg')] bg-cover bg-center bg-no-repeat opacity-30 pointer-events-none"
         aria-hidden="true"
       />
       <div className="relative h-full">

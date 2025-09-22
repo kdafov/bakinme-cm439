@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-hidden="true">
+  <!-- Background -->
+  <circle cx="256" cy="256" r="256" fill="#62B269"/>
+
+  <!-- Soybean pod & beans (white stroke) -->
+  <g transform="translate(256 256) rotate(20) scale(1.08)" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Main pod outline (asymmetric curve with three bulges) -->
+    <path d="
+      M -120 -10
+      C -80 -44  -32 -48   0 -30
+      C  26 -16  52 -8    88 -12
+      C 116 -16  132 16   96 34
+      C  60 52   28 44     0 58
+      C -36 74  -78 76  -118 36
+      C -132 20 -132 6  -120 -10 Z"/>
+
+    <!-- Bean pockets (inner arcs for subtle detail) -->
+    <path d="M -70 -18 C -48 -30 -34 -24 -20 -10" stroke-width="8"/>
+    <path d="M  -6  -4  C  10  -2  20   2  34  0" stroke-width="8"/>
+    <path d="M  54  2   C  70  4   86  10  96  12" stroke-width="8"/>
+
+    <!-- Beans moved slightly inside the pod -->
+    <g fill="#FFFFFF" stroke="none">
+      <ellipse cx="-40" cy="30" rx="18" ry="14"/>
+      <ellipse cx="-16" cy="42" rx="16" ry="12"/>
+    </g>
+  </g>
+
+  <!-- Subtle vignette -->
+  <defs>
+    <radialGradient id="v" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="rgba(0,0,0,0)"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.12)"/>
+    </radialGradient>
+  </defs>
+  <circle cx="256" cy="256" r="256" fill="url(#v)"/>
+</svg>

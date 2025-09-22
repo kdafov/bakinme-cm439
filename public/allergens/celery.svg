@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" aria-hidden="true">
+  <!-- Background -->
+  <circle cx="256" cy="256" r="256" fill="#9FC74F"/>
+
+  <!-- Celery stick: straight ribs all starting at one bottom point, thinner body lines -->
+  <g transform="translate(256 256) rotate(-6)" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Straight edges (thinner) -->
+    <line x1="0" y1="128" x2="-26" y2="-40" stroke-width="6"/>
+    <line x1="0" y1="128" x2="26"  y2="-40" stroke-width="6"/>
+
+    <!-- Straight central ribs (thinner) -->
+    <line x1="0" y1="128" x2="-12" y2="-40" stroke-width="6"/>
+    <line x1="0" y1="128" x2="0"   y2="-44" stroke-width="6"/>
+    <line x1="0" y1="128" x2="12"  y2="-40" stroke-width="6"/>
+
+    <!-- Smaller leaf cluster at top, now 4 leaves -->
+    <!-- Center leaf (smaller) -->
+    <path d="M 0 -64 C 16 -88 16 -116 0 -136 C -16 -116 -16 -88 0 -64 Z"/>
+    <!-- Left leaf (smaller) -->
+    <g transform="translate(-26 -90) rotate(-24)">
+      <path d="M 0 0 C 12 -16 12 -36 0 -54 C -12 -36 -12 -16 0 0 Z"/>
+    </g>
+    <!-- Right leaf (smaller) -->
+    <g transform="translate(26 -90) rotate(24)">
+      <path d="M 0 0 C 12 -16 12 -36 0 -54 C -12 -36 -12 -16 0 0 Z"/>
+    </g>
+    <!-- Extra far-left leaf (smallest) -->
+    <g transform="translate(-46 -82) rotate(-48) scale(0.8)">
+      <path d="M 0 0 C 12 -16 12 -36 0 -54 C -12 -36 -12 -16 0 0 Z"/>
+    </g>
+    <!-- Extra far-right leaf (smallest) -->
+    <g transform="translate(46 -82) rotate(48) scale(0.8)">
+      <path d="M 0 0 C 12 -16 12 -36 0 -54 C -12 -36 -12 -16 0 0 Z"/>
+    </g>
+  </g>
+
+  <!-- Subtle vignette -->
+  <defs>
+    <radialGradient id="v" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="rgba(0,0,0,0)"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.12)"/>
+    </radialGradient>
+  </defs>
+  <circle cx="256" cy="256" r="256" fill="url(#v)"/>
+</svg>

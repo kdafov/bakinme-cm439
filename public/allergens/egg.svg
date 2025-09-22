@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-hidden="true">
+  <!-- Background -->
+  <circle cx="256" cy="256" r="256" fill="#FBCA29"/>
+
+  <!-- Egg shape (white fill) -->
+  <g transform="translate(256 256) scale(1.1)" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+    <path fill="#FFFFFF" d="M0 -140
+             C 70 -140 120 -60 120 20
+             C 120 120 70 180 0 180
+             C -70 180 -120 120 -120 20
+             C -120 -60 -70 -140 0 -140 Z"/>
+    <!-- Inner greyish mini circles for depth -->
+    <circle cx="-34" cy="-18" r="18" fill="#CFCFCF" opacity="0.45"/>
+    <circle cx="36" cy="48" r="26" fill="#BFBFBF" opacity="0.28"/>
+  </g>
+
+  <!-- Subtle vignette -->
+  <defs>
+    <radialGradient id="v" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="rgba(0,0,0,0)"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.12)"/>
+    </radialGradient>
+  </defs>
+  <circle cx="256" cy="256" r="256" fill="url(#v)"/>
+</svg>

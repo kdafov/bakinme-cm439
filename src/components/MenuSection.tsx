@@ -1,4 +1,7 @@
+import { useState } from "react";
 import MenuItem from "./MenuItem";
+import Allergens from "./Allergens";
+import { useTranslation } from "react-i18next";
 
 interface MenuItemData {
   id: string;
@@ -15,13 +18,31 @@ interface MenuSectionProps {
 }
 
 export default function MenuSection({ id, title, items }: MenuSectionProps) {
+  const { t } = useTranslation();
+  const isFirstSection = id === "cookies";
+  const [showAllergens, setShowAllergens] = useState(false);
+
   return (
     <section id={id} className="mb-8">
       {/* Section Title */}
-      <div className="mb-6  mx-6">
-        <h2 className="text-2xl font-bold text-[#462305] pacifico-regular">
-          {title}
-        </h2>
+      <div className="mb-6 mx-6">
+        {isFirstSection ? (
+          <div className="flex justify-between items-center">
+            <h2 className="text-2xl font-bold text-[#462305] pacifico-regular">
+              {title}
+            </h2>
+            <button
+              onClick={() => setShowAllergens(true)}
+              className="text-lg  font-bold transition-colors duration-200 drop-shadow-sm border-2 border-[#462305] px-3 py-1 rounded-lg bg-[#DC7129]  text-white"
+            >
+              {t("allergensButton")}
+            </button>
+          </div>
+        ) : (
+          <h2 className="text-2xl font-bold text-[#462305] pacifico-regular">
+            {title}
+          </h2>
+        )}
         <div className="w-12 h-1 bg-gradient-to-r from-[#DC7129] to-[#F7C884] rounded-full mt-2"></div>
       </div>
 
@@ -37,6 +58,9 @@ export default function MenuSection({ id, title, items }: MenuSectionProps) {
           />
         ))}
       </div>
+
+      {/* Allergens Modal */}
+      {showAllergens && <Allergens onClose={() => setShowAllergens(false)} />}
     </section>
   );
 }

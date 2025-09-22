@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" aria-hidden="true">
+  <!-- Background -->
+  <circle cx="256" cy="256" r="256" fill="#E0C790"/>
+
+  <!-- Sesame seeds cluster (bigger) -->
+  <g transform="translate(256 256) rotate(12) scale(2.0)" fill="#FFFFFF" stroke="none">
+    <!-- Center -->
+    <path d="M0 -10 Q 8 0 0 10 Q -8 0 0 -10 Z" transform="translate(0,0) rotate(8)"/>
+    <!-- Ring 1 -->
+    <path d="M0 -10 Q 8 0 0 10 Q -8 0 0 -10 Z" transform="translate(-24,-6) rotate(-18) scale(0.95)"/>
+    <path d="M0 -10 Q 8 0 0 10 Q -8 0 0 -10 Z" transform="translate(26,-10) rotate(24) scale(0.92)"/>
+    <path d="M0 -10 Q 8 0 0 10 Q -8 0 0 -10 Z" transform="translate(-4,26) rotate(10) scale(0.9)"/>
+    <path d="M0 -10 Q 8 0 0 10 Q -8 0 0 -10 Z" transform="translate(12,22) rotate(-6) scale(0.88)"/>
+    <!-- Ring 2 -->
+    <path d="M0 -10 Q 8 0 0 10 Q -8 0 0 -10 Z" transform="translate(-42,-12) rotate(12) scale(0.86)"/>
+    <path d="M0 -10 Q 8 0 0 10 Q -8 0 0 -10 Z" transform="translate(44,-16) rotate(36) scale(0.84)"/>
+    <path d="M0 -10 Q 8 0 0 10 Q -8 0 0 -10 Z" transform="translate(-22,44) rotate(-20) scale(0.86)"/>
+    <path d="M0 -10 Q 8 0 0 10 Q -8 0 0 -10 Z" transform="translate(18,44) rotate(18) scale(0.82)"/>
+    <!-- Ring 3 -->
+    <path d="M0 -10 Q 8 0 0 10 Q -8 0 0 -10 Z" transform="translate(-60,10) rotate(-10) scale(0.78)"/>
+    <path d="M0 -10 Q 8 0 0 10 Q -8 0 0 -10 Z" transform="translate(60,6) rotate(10) scale(0.8)"/>
+    <path d="M0 -10 Q 8 0 0 10 Q -8 0 0 -10 Z" transform="translate(-40,58) rotate(6) scale(0.76)"/>
+    <path d="M0 -10 Q 8 0 0 10 Q -8 0 0 -10 Z" transform="translate(36,60) rotate(-16) scale(0.76)"/>
+    <!-- Sparse accents -->
+    <path d="M0 -10 Q 8 0 0 10 Q -8 0 0 -10 Z" transform="translate(-6,-40) rotate(-6) scale(0.7)"/>
+    <path d="M0 -10 Q 8 0 0 10 Q -8 0 0 -10 Z" transform="translate(8,-38) rotate(20) scale(0.68)"/>
+    <path d="M0 -10 Q 8 0 0 10 Q -8 0 0 -10 Z" transform="translate(-2,62) rotate(2) scale(0.72)"/>
+  </g>
+
+  <!-- Subtle vignette -->
+  <defs>
+    <radialGradient id="v" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="rgba(0,0,0,0)"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.12)"/>
+    </radialGradient>
+  </defs>
+  <circle cx="256" cy="256" r="256" fill="url(#v)"/>
+</svg>

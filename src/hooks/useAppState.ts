@@ -14,6 +14,7 @@ export function useAppState() {
     if (browserLang.startsWith("es")) detectedLanguage = "es";
     else if (browserLang.startsWith("de")) detectedLanguage = "de";
     else if (browserLang.startsWith("it")) detectedLanguage = "it";
+    else if (browserLang.startsWith("bg")) detectedLanguage = "bg";
     setLanguage(detectedLanguage);
     i18n.changeLanguage(detectedLanguage);
     setIsLoading(false);

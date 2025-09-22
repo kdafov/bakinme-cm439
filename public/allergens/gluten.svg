@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-hidden="true">
+  <!-- Yellowish dark background (round, new color) -->
+  <circle cx="256" cy="256" r="256" fill="#A08259"/>
+
+  <!-- Wheat (gluten) icon — slightly larger and tilted 20° to the right -->
+  <g transform="translate(256 256) rotate(20) scale(1.12)" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Stem -->
+    <path d="M0 120 L0 -80"/>
+    <!-- Grains left -->
+    <path d="M0 -60 C-28 -64 -40 -84 -38 -104"/>
+    <path d="M0 -30 C-30 -34 -44 -54 -44 -76"/>
+    <path d="M0 0   C-34 -2  -52 -24 -54 -48"/>
+    <path d="M0 30  C-34 28  -52 10  -56 -10"/>
+    <path d="M0 60  C-30 62  -46 48  -52 30"/>
+    <!-- Grains right -->
+    <path d="M0 -60 C28 -64 40 -84 38 -104"/>
+    <path d="M0 -30 C30 -34 44 -54 44 -76"/>
+    <path d="M0 0   C34 -2  52 -24 54 -48"/>
+    <path d="M0 30  C34 28  52 10  56 -10"/>
+    <path d="M0 60  C30 62  46 48  52 30"/>
+    <!-- Top tuft -->
+    <path d="M0 -80 L-14 -116"/>
+    <path d="M0 -80 L14 -116"/>
+  </g>
+
+  <!-- Subtle vignette for depth -->
+  <radialGradient id="v" cx="50%" cy="40%" r="70%">
+    <stop offset="0%" stop-color="rgba(0,0,0,0)"/>
+    <stop offset="100%" stop-color="rgba(0,0,0,0.15)"/>
+  </radialGradient>
+  <rect width="512" height="512" rx="56" fill="url(#v)"/>
+</svg>

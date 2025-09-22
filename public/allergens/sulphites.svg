@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" aria-hidden="true">
+  <!-- Background -->
+  <circle cx="256" cy="256" r="256" fill="#F8921C"/>
+
+  <!-- Centered lab flask, half filled solid white -->
+  <g transform="translate(256 303) scale(1.08)" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+    <defs>
+      <!-- Clip to flask interior -->
+      <clipPath id="flaskClip" clipPathUnits="userSpaceOnUse">
+        <path d="M -62 46 L 62 46 L 78 22 L 48 -36 L 24 -94 L 24 -140 L -24 -140 L -24 -94 L -48 -36 L -78 22 Z"/>
+      </clipPath>
+    </defs>
+
+    <!-- Half-fill (bottom half only) -->
+    <rect x="-120" y="-47" width="240" height="93" fill="#FFFFFF" clip-path="url(#flaskClip)"/>
+
+    <!-- Flask outline -->
+    <g fill="none">
+      <path d="M -24 -140
+               L -24 -94
+               C -24 -80 -36 -60 -48 -36
+               L -78 22
+               C -84 34 -76 46 -62 46
+               L 62 46
+               C 76 46 84 34 78 22
+               L 48 -36
+               C 36 -60 24 -80 24 -94
+               L 24 -140"/>
+      <!-- Neck lip -->
+      <path d="M -30 -140 H 30"/>
+    </g>
+  </g>
+
+  <!-- Subtle vignette -->
+  <defs>
+    <radialGradient id="v" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="rgba(0,0,0,0)"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.12)"/>
+    </radialGradient>
+  </defs>
+  <circle cx="256" cy="256" r="256" fill="url(#v)"/>
+</svg>

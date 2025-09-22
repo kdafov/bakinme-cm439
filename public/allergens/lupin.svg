@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" aria-hidden="true">
+  <circle cx="256" cy="256" r="256" fill="#767676"/>
+
+  <!-- Three slightly separated ellipses -->
+  <g transform="translate(256 256)" fill="#FFFFFF">
+    <!-- top -->
+    <ellipse cx="0" cy="-68" rx="64" ry="50" transform="rotate(10)"/>
+    <!-- left -->
+    <ellipse cx="-78" cy="20" rx="56" ry="44" transform="rotate(-18)"/>
+    <!-- right -->
+    <ellipse cx="78" cy="14" rx="56" ry="44" transform="rotate(18)"/>
+  </g>
+</svg>
