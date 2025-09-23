@@ -28,11 +28,9 @@ export default function CategoriesStrip({
   );
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  // Center the active category using horizontal scroll
   useEffect(() => {
     if (isSearchMode) return;
 
-    // Don't auto-scroll if this was triggered by a user click
     if (lastClickedCategory === activeCategory) {
       setLastClickedCategory(null);
       return;
@@ -55,7 +53,6 @@ export default function CategoriesStrip({
         Math.min(buttonCenter - containerWidth / 2, maxScroll)
       );
 
-      // Only scroll if significantly different to avoid micro-adjustments
       if (Math.abs(container.scrollLeft - target) > 20) {
         container.scrollTo({
           left: target,

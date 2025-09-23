@@ -1,24 +1,24 @@
 import type { MenuObject } from "./types";
 
-export const menu_DE: MenuObject = {
+export const menu_FR: MenuObject = {
   categories: [
-    { id: "cookies", name: "Kekse" },
+    { id: "cookies", name: "Cookies" },
     { id: "brownies", name: "Brownies" },
-    { id: "desserts", name: "Cremige Desserts" },
-    { id: "cookies-fries", name: "Keks-Pommes" },
+    { id: "desserts", name: "Desserts crémeux" },
+    { id: "cookies-fries", name: "Frites de cookies" },
     { id: "crepes", name: "Crêpes" },
-    { id: "drinks", name: "Getränke" },
+    { id: "drinks", name: "Boissons" },
   ],
   sections: [
     {
       id: "cookies",
-      title: "Kekse",
+      title: "Cookies",
       items: [
         {
           id: "la-de-siempre",
           image: "image-placeholder.png",
-          title: "Der Klassiker",
-          description: "Schokostückchen und Meersalzflocken",
+          title: "Le Classique",
+          description: "Pépites de chocolat et flocons de sel de mer",
           price: 4.0,
           allergies: ["gluten", "egg", "milk"],
           passiveAllergies: ["peanuts", "pinenuts", "soybeans"],
@@ -26,9 +26,9 @@ export const menu_DE: MenuObject = {
         {
           id: "brisa-limon",
           image: "image-placeholder.png",
-          title: "Zitronenbrise",
+          title: "Brise de citron",
           description:
-            "Weiße Schokolade, Zitrone, Haselnüsse, Ingwer und Pistazie",
+            "Chocolat blanc, citron, noisettes, gingembre et pistache",
           price: 5.0,
           allergies: ["gluten", "egg", "milk", "peanuts", "pinenuts"],
           passiveAllergies: ["soybeans"],
@@ -36,8 +36,8 @@ export const menu_DE: MenuObject = {
         {
           id: "amanecer-mediterraneo",
           image: "image-placeholder.png",
-          title: "Mediterraner Morgen",
-          description: "Safran, Orange und Kokos",
+          title: "Aube méditerranéenne",
+          description: "Safran, orange et coco",
           price: 4.5,
           allergies: ["gluten", "egg", "milk"],
           passiveAllergies: ["peanuts", "pinenuts", "soybeans"],
@@ -45,8 +45,8 @@ export const menu_DE: MenuObject = {
         {
           id: "dulce-alquimia",
           image: "image-placeholder.png",
-          title: "Süße Alchemie",
-          description: "Mandeln und Kokos",
+          title: "Alchimie douce",
+          description: "Amandes et coco",
           price: 4.0,
           allergies: ["gluten", "egg", "milk", "pinenuts"],
           passiveAllergies: ["soybeans", "peanuts"],
@@ -54,9 +54,8 @@ export const menu_DE: MenuObject = {
         {
           id: "pecado-chocolate",
           image: "image-placeholder.png",
-          title: "Schokoladensünde",
-          description:
-            "Doppelte Schokolade, Kaffee, Schokoladenganache und Baileys",
+          title: "Péché au chocolat",
+          description: "Double chocolat, café, ganache au chocolat et Baileys",
           price: 5.5,
           allergies: ["gluten", "egg", "milk", "pinenuts"],
           passiveAllergies: ["soybeans", "peanuts"],
@@ -64,8 +63,8 @@ export const menu_DE: MenuObject = {
         {
           id: "esencia-fuego",
           image: "image-placeholder.png",
-          title: "Feuer-Essenz",
-          description: "Cayennepfeffer und Zartbitterschokolade",
+          title: "Essence de feu",
+          description: "Poivre de Cayenne et chocolat noir",
           price: 4.0,
           allergies: ["gluten", "egg", "milk"],
           passiveAllergies: ["soybeans", "peanuts", "pinenuts"],
@@ -73,8 +72,8 @@ export const menu_DE: MenuObject = {
         {
           id: "jardin-secreto",
           image: "image-placeholder.png",
-          title: "Geheimer Garten",
-          description: "Lavendel und Zitrone",
+          title: "Jardin secret",
+          description: "Lavande et citron",
           price: 4.0,
           allergies: ["gluten", "egg", "milk"],
           passiveAllergies: ["soybeans", "peanuts", "pinenuts"],
@@ -83,7 +82,7 @@ export const menu_DE: MenuObject = {
           id: "cookiemisu",
           image: "image-placeholder.png",
           title: "Cookiemisu",
-          description: "Mascarponecreme und Kaffee",
+          description: "Crème de mascarpone et café",
           price: 5.5,
           allergies: ["gluten", "egg", "milk"],
           passiveAllergies: ["soybeans", "peanuts", "pinenuts"],
@@ -91,8 +90,8 @@ export const menu_DE: MenuObject = {
         {
           id: "caricia-meringa",
           image: "image-placeholder.png",
-          title: "Baiser-Kuss",
-          description: "Zitronencreme und italienisches Baiser",
+          title: "Caresse de meringue",
+          description: "Crème au citron et meringue italienne",
           price: 5.5,
           allergies: ["gluten", "egg", "milk"],
           passiveAllergies: ["soybeans", "peanuts", "pinenuts"],
@@ -101,7 +100,7 @@ export const menu_DE: MenuObject = {
           id: "cheesecookie",
           image: "image-placeholder.png",
           title: "Cheesecookie",
-          description: "Süßer Frischkäse und Erdbeermarmelade",
+          description: "Fromage à la crème sucré et confiture de fraises",
           price: 5.0,
           allergies: ["gluten", "egg", "milk"],
           passiveAllergies: ["soybeans", "peanuts", "pinenuts"],
@@ -116,7 +115,7 @@ export const menu_DE: MenuObject = {
           id: "mr-brownie",
           image: "image-placeholder.png",
           title: "Mr Brownie",
-          description: "Cremiger Brownie",
+          description: "Brownie crémeux",
           price: 4.5,
           allergies: ["gluten", "egg", "milk"],
           passiveAllergies: ["soybeans", "peanuts", "pinenuts"],
@@ -124,8 +123,8 @@ export const menu_DE: MenuObject = {
         {
           id: "dulce-contraste",
           image: "image-placeholder.png",
-          title: "Süßer Kontrast",
-          description: "Cremiger Brownie mit Salzkaramell",
+          title: "Doux contraste",
+          description: "Brownie crémeux au caramel salé",
           price: 5.0,
           allergies: ["gluten", "egg", "milk"],
           passiveAllergies: ["soybeans", "peanuts", "pinenuts"],
@@ -133,8 +132,8 @@ export const menu_DE: MenuObject = {
         {
           id: "brownies-donuts",
           image: "image-placeholder.png",
-          title: "Brownie-Donuts",
-          description: "Brownie in Donut-Form",
+          title: "Brownies donuts",
+          description: "Brownie en forme de donut",
           price: 3.5,
           allergies: ["gluten", "egg", "milk"],
           passiveAllergies: ["soybeans", "peanuts", "pinenuts"],
@@ -143,13 +142,13 @@ export const menu_DE: MenuObject = {
     },
     {
       id: "desserts",
-      title: "Cremige Desserts",
+      title: "Desserts crémeux",
       items: [
         {
           id: "velluto-mascarpone",
           image: "image-placeholder.png",
-          title: "Velluto di Mascarpone",
-          description: "Mascarponecreme, Kakao-Crumble und Haselnüsse",
+          title: "Velluto di mascarpone",
+          description: "Crème de mascarpone, crumble au cacao et noisettes",
           price: 5.0,
           allergies: ["gluten", "egg", "milk", "pinenuts"],
           passiveAllergies: ["soybeans", "peanuts"],
@@ -157,8 +156,8 @@ export const menu_DE: MenuObject = {
         {
           id: "mini-cheesecake-coco",
           image: "image-placeholder.png",
-          title: "Mini-Cheesecake",
-          description: "Einzelportion Cheesecake mit Kokos und Mascarpone",
+          title: "Mini cheesecake",
+          description: "Cheesecake individuel avec coco et mascarpone",
           price: 5.0,
           allergies: ["gluten", "egg", "milk"],
           passiveAllergies: ["soybeans", "peanuts", "pinenuts"],
@@ -166,9 +165,8 @@ export const menu_DE: MenuObject = {
         {
           id: "mini-cheesecake-chocolate",
           image: "image-placeholder.png",
-          title: "Mini-Cheesecake",
-          description:
-            "Einzelportion Cheesecake mit Schokolade und Haselnüssen",
+          title: "Mini cheesecake",
+          description: "Cheesecake individuel avec chocolat et noisettes",
           price: 5.0,
           allergies: ["gluten", "egg", "milk", "pinenuts"],
           passiveAllergies: ["soybeans", "peanuts"],
@@ -176,8 +174,8 @@ export const menu_DE: MenuObject = {
         {
           id: "mini-cheesecake-feta",
           image: "image-placeholder.png",
-          title: "Mini-Cheesecake",
-          description: "Einzelportion Cheesecake mit Feta, Honig und Feigen",
+          title: "Mini cheesecake",
+          description: "Cheesecake individuel avec feta, miel et figues",
           price: 5.0,
           allergies: ["gluten", "egg", "milk"],
           passiveAllergies: ["soybeans", "peanuts", "pinenuts"],
@@ -185,8 +183,8 @@ export const menu_DE: MenuObject = {
         {
           id: "mini-cheesecake-gofio",
           image: "image-placeholder.png",
-          title: "Mini-Cheesecake",
-          description: "Einzelportion Cheesecake mit Gofio und Blaubeeren",
+          title: "Mini cheesecake",
+          description: "Cheesecake individuel avec gofio et myrtilles",
           price: 5.0,
           allergies: ["gluten", "egg", "milk"],
           passiveAllergies: ["soybeans", "peanuts", "pinenuts"],
@@ -194,8 +192,8 @@ export const menu_DE: MenuObject = {
         {
           id: "tres-leches",
           image: "image-placeholder.png",
-          title: "Tres Leches",
-          description: "Pistazie und Kokos",
+          title: "Tres leches",
+          description: "Pistache et coco",
           price: 6.0,
           allergies: ["gluten", "egg", "milk"],
           passiveAllergies: ["soybeans", "peanuts", "pinenuts"],
@@ -204,13 +202,13 @@ export const menu_DE: MenuObject = {
     },
     {
       id: "cookies-fries",
-      title: "Keks-Pommes",
+      title: "Frites de cookies",
       items: [
         {
           id: "snackitos",
           image: "image-placeholder.png",
           title: "Snackitos",
-          description: "Butterkekse (8 Stück mit 1 Sauce)",
+          description: "Biscuits au beurre (8 pièces avec 1 sauce)",
           price: 6.5,
           allergies: ["gluten", "egg", "milk"],
           passiveAllergies: ["soybeans", "peanuts", "pinenuts"],
@@ -224,8 +222,8 @@ export const menu_DE: MenuObject = {
         {
           id: "crepes-classica",
           image: "image-placeholder.png",
-          title: "Klassische Crêpe",
-          description: "Klassische Crêpe mit Creme nach Wahl",
+          title: "Crêpe classique",
+          description: "Crêpe classique avec crème au choix",
           price: 4.5,
           allergies: ["gluten", "egg", "milk"],
           passiveAllergies: ["soybeans", "peanuts", "pinenuts"],
@@ -233,8 +231,8 @@ export const menu_DE: MenuObject = {
         {
           id: "crepes-1-topping",
           image: "image-placeholder.png",
-          title: "Crêpe & 1 Topping",
-          description: "Crêpe mit einem zusätzlichen Topping",
+          title: "Crêpe & 1 garniture",
+          description: "Crêpe avec une garniture supplémentaire",
           price: 5.5,
           allergies: ["gluten", "egg", "milk"],
           passiveAllergies: ["soybeans", "peanuts", "pinenuts"],
@@ -242,8 +240,8 @@ export const menu_DE: MenuObject = {
         {
           id: "crepes-2-toppings",
           image: "image-placeholder.png",
-          title: "Crêpe & 2 Toppings",
-          description: "Crêpe mit zwei zusätzlichen Toppings",
+          title: "Crêpe & 2 garnitures",
+          description: "Crêpe avec deux garnitures supplémentaires",
           price: 6.0,
           allergies: ["gluten", "egg", "milk"],
           passiveAllergies: ["soybeans", "peanuts", "pinenuts"],
@@ -251,8 +249,8 @@ export const menu_DE: MenuObject = {
         {
           id: "crepes-3-toppings",
           image: "image-placeholder.png",
-          title: "Crêpe & 3 Toppings",
-          description: "Crêpe mit drei zusätzlichen Toppings",
+          title: "Crêpe & 3 garnitures",
+          description: "Crêpe avec trois garnitures supplémentaires",
           price: 6.5,
           allergies: ["gluten", "egg", "milk"],
           passiveAllergies: ["soybeans", "peanuts", "pinenuts"],
@@ -260,22 +258,22 @@ export const menu_DE: MenuObject = {
         {
           id: "crepes-creams-information",
           message:
-            "Crêpe-Cremes: Nutella, Marmelade, Mascarpone-Creme, Lotus, Dulce de leche, Pistaziencreme",
+            "Crèmes pour Crêpes : Nutella, Confiture, Crème mascarpone, Lotus, Dulce de leche, Crème à la pistache",
         },
         {
           id: "crepes-toppings-information",
-          message: "Toppings: Haselnüsse, Kokos, Mandeln, Oreo, Marshmallows",
+          message: "Garnitures : Noisettes, Coco, Amandes, Oreo, Guimauves",
         },
       ],
     },
     {
       id: "compliments",
-      title: "Ergänzungen",
+      title: "Compléments",
       items: [
         {
           id: "salsa-pistacho",
           image: "image-placeholder.png",
-          title: "Pistaziensauce",
+          title: "Sauce pistache",
           price: 1.0,
           allergies: [],
           passiveAllergies: [],
@@ -291,7 +289,7 @@ export const menu_DE: MenuObject = {
         {
           id: "dulce-de-leche",
           image: "image-placeholder.png",
-          title: "Dulce de Leche",
+          title: "Dulce de leche",
           price: 0.5,
           allergies: [],
           passiveAllergies: [],
@@ -299,7 +297,7 @@ export const menu_DE: MenuObject = {
         {
           id: "jeringa-nutella",
           image: "image-placeholder.png",
-          title: "Nutella-Spritze",
+          title: "Seringue Nutella",
           price: 1.0,
           allergies: [],
           passiveAllergies: [],
@@ -307,7 +305,7 @@ export const menu_DE: MenuObject = {
         {
           id: "jeringa-pistacchio",
           image: "image-placeholder.png",
-          title: "Pistazien-Spritze",
+          title: "Seringue pistache",
           price: 1.5,
           allergies: [],
           passiveAllergies: [],
@@ -315,7 +313,7 @@ export const menu_DE: MenuObject = {
         {
           id: "bola-helado",
           image: "image-placeholder.png",
-          title: "Eiskugel",
+          title: "Boule de glace",
           price: 1.0,
           allergies: [],
           passiveAllergies: [],
@@ -324,12 +322,12 @@ export const menu_DE: MenuObject = {
     },
     {
       id: "drinks",
-      title: "Getränke",
+      title: "Boissons",
       items: [
         {
           id: "agua-sin-gas",
           image: "image-placeholder.png",
-          title: "Stilles Wasser",
+          title: "Eau plate",
           price: 1.0,
           allergies: [],
           passiveAllergies: [],
@@ -337,7 +335,7 @@ export const menu_DE: MenuObject = {
         {
           id: "agua-con-gas",
           image: "image-placeholder.png",
-          title: "Wasser mit Kohlensäure",
+          title: "Eau gazeuse",
           price: 1.0,
           allergies: [],
           passiveAllergies: [],
@@ -345,8 +343,8 @@ export const menu_DE: MenuObject = {
         {
           id: "smoothie-oleada-tropical",
           image: "image-placeholder.png",
-          title: "Tropenwelle",
-          description: "Kokos, Minze und Ananas Smoothie",
+          title: "Vague tropicale",
+          description: "Smoothie coco, menthe et ananas",
           price: 5.0,
           allergies: [],
           passiveAllergies: [],
@@ -354,8 +352,8 @@ export const menu_DE: MenuObject = {
         {
           id: "smoothie-sol-verano",
           image: "image-placeholder.png",
-          title: "Sommersonne",
-          description: "Ingwer, Pfirsich und Melone Smoothie",
+          title: "Soleil d'été",
+          description: "Smoothie gingembre, pêche et melon",
           price: 5.0,
           allergies: [],
           passiveAllergies: [],
@@ -363,8 +361,8 @@ export const menu_DE: MenuObject = {
         {
           id: "smoothie-verde-exotico",
           image: "image-placeholder.png",
-          title: "Exotischer Grüner",
-          description: "Avocado, Mango, Kokos und Zitronensaft Smoothie",
+          title: "Vert exotique",
+          description: "Smoothie avocat, mangue, coco et jus de citron",
           price: 5.0,
           allergies: [],
           passiveAllergies: [],
@@ -372,8 +370,8 @@ export const menu_DE: MenuObject = {
         {
           id: "smoothie-berry-limon",
           image: "image-placeholder.png",
-          title: "Beeren-Limette",
-          description: "Waldbeeren und Limette Smoothie",
+          title: "Baies citron vert",
+          description: "Smoothie fruits des bois et citron vert",
           price: 5.0,
           allergies: [],
           passiveAllergies: [],
@@ -381,8 +379,8 @@ export const menu_DE: MenuObject = {
         {
           id: "bebidas-varias",
           image: "image-placeholder.png",
-          title: "Verschiedene Getränke",
-          description: "Limonaden und andere Getränke",
+          title: "Boissons variées",
+          description: "Sodas et autres boissons",
           price: 1.5,
           allergies: [],
           passiveAllergies: [],
@@ -390,7 +388,7 @@ export const menu_DE: MenuObject = {
         {
           id: "cafe",
           image: "image-placeholder.png",
-          title: "Kaffee",
+          title: "Café",
           price: 1.2,
           allergies: [],
           passiveAllergies: [],
@@ -398,7 +396,7 @@ export const menu_DE: MenuObject = {
         {
           id: "cafe-largo",
           image: "image-placeholder.png",
-          title: "Großer Kaffee",
+          title: "Café allongé",
           price: 1.5,
           allergies: [],
           passiveAllergies: [],
@@ -406,7 +404,7 @@ export const menu_DE: MenuObject = {
         {
           id: "cafe-con-leche",
           image: "image-placeholder.png",
-          title: "Kaffee mit Milch",
+          title: "Café au lait",
           price: 2.0,
           allergies: [],
           passiveAllergies: [],

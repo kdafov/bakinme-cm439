@@ -11,7 +11,7 @@ const languages = [
   { code: "es", label: "ES" },
   { code: "de", label: "DE" },
   { code: "it", label: "IT" },
-  { code: "bg", label: "BG" },
+  { code: "fr", label: "FR" },
 ];
 
 export default function LanguageToggle({ language, onToggle }: Props) {

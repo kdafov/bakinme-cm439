@@ -6,14 +6,14 @@
   "followUs": "Seguici sui social media",
   "followUsShort": "Seguici",
   "searchResults": "Risultati della ricerca",
-  "noItemsFound": "Nessun elemento trovato per",
+  "noItemsFound": "Nessun elemento trovato",
   "allergensButton": "Allergeni",
   "allergenInformation": "Informazioni sugli Allergeni",
   "allergenNotice": "Si prega di informare il nostro staff di eventuali allergie o requisiti dietetici",
   "glutenName": "Glutine",
   "glutenDescription": "Presente in grano, segale, orzo e avena. Comune nella maggior parte dei biscotti, brownies e crêpes.",
-  "eggsName": "Uova",
-  "eggsDescription": "Utilizzate in pasticceria e nella preparazione di dolci. Comuni in biscotti, brownies e dolci cremosi.",
+  "eggName": "Uova",
+  "eggDescription": "Utilizzate in pasticceria e nella preparazione di dolci. Comuni in biscotti, brownies e dolci cremosi.",
   "milkName": "Latte",
   "milkDescription": "Inclusi lattosio e prodotti caseari. Presente in creme, mascarpone e prodotti al cioccolato.",
   "nutsName": "Frutta a Guscio",
@@ -39,5 +39,8 @@
   "lupinName": "Lupini",
   "lupinDescription": "Fagioli di lupino e farina. Può essere presente in alcune farine speciali o ingredienti proteici.",
   "molluscsName": "Molluschi",
-  "molluscsDescription": "Cozze, ostriche, vongole, lumache. Può essere presente in alcuni ingredienti speciali."
+  "molluscsDescription": "Cozze, ostriche, vongole, lumache. Può essere presente in alcuni ingredienti speciali.",
+  "goBack": "Torna indietro",
+  "contains": "Contiene",
+  "mayContain": "Può contenere"
 }

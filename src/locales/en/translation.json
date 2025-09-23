@@ -6,14 +6,14 @@
   "followUs": "Follow us on social media",
   "followUsShort": "Follow us",
   "searchResults": "Search Results",
-  "noItemsFound": "No items found for",
+  "noItemsFound": "No items found",
   "allergensButton": "Allergens",
-  "allergenInformation": "Allergen Information",
+  "allergenInformation": "Allergens Information",
   "allergenNotice": "Please inform our staff of any allergies or dietary requirements",
   "glutenName": "Gluten",
   "glutenDescription": "Found in wheat, rye, barley, and oats. Present in most cookies, brownies, and crepes.",
-  "eggsName": "Eggs",
-  "eggsDescription": "Used in baking and dessert preparation. Common in cookies, brownies, and creamy desserts.",
+  "eggName": "Eggs",
+  "eggDescription": "Used in baking and dessert preparation. Common in cookies, brownies, and creamy desserts.",
   "milkName": "Milk",
   "milkDescription": "Including lactose and dairy products. Found in creams, mascarpone, and chocolate products.",
   "nutsName": "Nuts",
@@ -39,5 +39,8 @@
   "lupinName": "Lupin",
   "lupinDescription": "Lupin beans and flour. May be present in some specialty flours or protein ingredients.",
   "molluscsName": "Molluscs",
-  "molluscsDescription": "Mussels, oysters, clams, snails. May be present in some specialty ingredients."
+  "molluscsDescription": "Mussels, oysters, clams, snails. May be present in some specialty ingredients.",
+  "goBack": "Go back",
+  "contains": "Contains",
+  "mayContain": "May contain"
 }

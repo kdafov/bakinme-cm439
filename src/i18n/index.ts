@@ -4,7 +4,7 @@ import en from "@/locales/en/translation.json";
 import es from "@/locales/es/translation.json";
 import de from "@/locales/de/translation.json";
 import it from "@/locales/it/translation.json";
-import bg from "@/locales/bg/translation.json";
+import fr from "@/locales/fr/translation.json";
 
 if (!i18n.isInitialized) {
   i18n.use(initReactI18next).init({
@@ -13,7 +13,7 @@ if (!i18n.isInitialized) {
       es: { translation: es },
       it: { translation: it },
       de: { translation: de },
-      bg: { translation: bg },
+      fr: { translation: fr },
     },
     lng: "en",
     fallbackLng: "en",

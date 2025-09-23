@@ -49,7 +49,7 @@ export default function SocialFooter() {
           {t("findUs")}
         </h3>
 
-        <p className="text-black text-sm mb-6">{t("followUs")}</p>
+        <p className="text-black text-md mb-6">{t("followUs")}</p>
 
         <div className="flex justify-center space-x-6">
           {socialLinks.map((social) => {
@@ -70,7 +70,10 @@ export default function SocialFooter() {
         </div>
 
         <div className="mt-6 pt-4 border-t border-[#DC7129]/10">
-          <p className="text-xs text-black">© 2025 Bakin' Me Crazy</p>
+          <p className="text-xs text-black mb-1">
+            &copy; {new Date().getFullYear()} Bakin' Me Crazy
+          </p>
+          <p className="text-xs text-black">by davbyte.com</p>
         </div>
       </div>
     </div>

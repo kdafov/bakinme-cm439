@@ -2,19 +2,16 @@ import { useState } from "react";
 import MenuItem from "./MenuItem";
 import Allergens from "./Allergens";
 import { useTranslation } from "react-i18next";
-
-interface MenuItemData {
-  id: string;
-  image: string;
-  title: string;
-  description: string;
-  price: number;
-}
+import type { MenuEntry, MenuItem as MenuItemType } from "../data/types";
 
 interface MenuSectionProps {
   id: string;
   title: string;
-  items: MenuItemData[];
+  items: MenuEntry[];
+}
+
+function isMenuItem(entry: MenuEntry): entry is MenuItemType {
+  return "price" in entry;
 }
 
 export default function MenuSection({ id, title, items }: MenuSectionProps) {
@@ -33,7 +30,7 @@ export default function MenuSection({ id, title, items }: MenuSectionProps) {
             </h2>
             <button
               onClick={() => setShowAllergens(true)}
-              className="text-lg  font-bold transition-colors duration-200 drop-shadow-sm border-2 border-[#462305] px-3 py-1 rounded-lg bg-[#DC7129]  text-white"
+              className="text-lg font-bold transition-colors duration-200 drop-shadow-sm border-2 border-[#462305] px-3 py-1 rounded-lg bg-[#DC7129] text-white"
             >
               {t("allergensButton")}
             </button>
@@ -48,15 +45,23 @@ export default function MenuSection({ id, title, items }: MenuSectionProps) {
 
       {/* Menu Items */}
       <div className="space-y-4">
-        {items.map((item) => (
-          <MenuItem
-            key={item.id}
-            image={item.image}
-            title={item.title}
-            description={item.description}
-            price={item.price}
-          />
-        ))}
+        {items.map((item) => {
+          if (isMenuItem(item)) {
+            return (
+              <MenuItem
+                key={item.id}
+                image={item.image}
+                title={item.title}
+                description={item.description}
+                price={item.price}
+                allergies={item.allergies}
+                passiveAllergies={item.passiveAllergies}
+              />
+            );
+          } else {
+            return <MenuItem key={item.id} message={item.message} />;
+          }
+        })}
       </div>
 
       {/* Allergens Modal */}

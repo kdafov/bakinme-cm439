@@ -8,16 +8,16 @@ import { menu_EN } from "../data/menu_en";
 import { menu_ES } from "../data/menu_es";
 import { menu_DE } from "@/data/menu_de";
 import { menu_IT } from "@/data/menu_it";
-import { menu_BG } from "@/data/menu_bg";
+import { menu_FR } from "@/data/menu_fr";
 import SocialFooter from "./Socials";
+import type { MenuEntry, MenuItem as MenuItemType } from "../data/types";
 
-interface MenuItemData {
-  id: string;
-  image: string;
-  title: string;
-  description: string;
-  price: number;
+interface MenuItemData extends MenuItemType {
   sectionTitle?: string;
+}
+
+function isMenuItem(entry: MenuEntry): entry is MenuItemType {
+  return "price" in entry;
 }
 
 export default function MenuPage() {
@@ -37,8 +37,8 @@ export default function MenuPage() {
         return menu_DE;
       case "it":
         return menu_IT;
-      case "bg":
-        return menu_BG;
+      case "fr":
+        return menu_FR;
       default:
         return menu_EN;
     }
@@ -47,7 +47,7 @@ export default function MenuPage() {
   useEffect(() => {
     if (searchQuery.trim()) {
       const allItems = menuData.sections.flatMap((section) =>
-        section.items.map((item) => ({
+        section.items.filter(isMenuItem).map((item) => ({
           ...item,
           sectionTitle: section.title,
         }))
@@ -56,7 +56,8 @@ export default function MenuPage() {
       const filtered = allItems.filter(
         (item) =>
           item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          item.description.toLowerCase().includes(searchQuery.toLowerCase())
+          (item.description &&
+            item.description.toLowerCase().includes(searchQuery.toLowerCase()))
       );
 
       setFilteredItems(filtered);
@@ -65,7 +66,6 @@ export default function MenuPage() {
     }
   }, [searchQuery, menuData]);
 
-  // Delay initialization to prevent auto-scroll on load
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsInitialized(true);
@@ -75,11 +75,9 @@ export default function MenuPage() {
   }, []);
 
   useEffect(() => {
-    // Only add scroll listener after initialization and when not searching
     if (!isInitialized || searchQuery.trim()) return;
 
     const handleScroll = () => {
-      // Skip if user is actively scrolling from category click
       if (isUserScrolling) return;
 
       const sections = menuData.sections;
@@ -108,10 +106,8 @@ export default function MenuPage() {
   }, [searchQuery, menuData, isInitialized, isUserScrolling]);
 
   const handleCategoryClick = (categoryId: string) => {
-    // Only allow scrolling after initialization
     if (!isInitialized) return;
 
-    // Set user scrolling flag to prevent scroll listener interference
     setIsUserScrolling(true);
     setActiveCategory(categoryId);
     setSearchQuery("");
@@ -128,10 +124,9 @@ export default function MenuPage() {
         behavior: "smooth",
       });
 
-      // Re-enable scroll detection after scroll animation completes
       setTimeout(() => {
         setIsUserScrolling(false);
-      }, 600); // Slightly longer than typical smooth scroll duration
+      }, 600);
     }
   };
 
@@ -140,11 +135,7 @@ export default function MenuPage() {
   };
 
   return (
-    <section
-      data-menu-section
-      // className="h-dvh bg-gradient-to-b from-[#F7C884]/10 to-white"
-      className="relative h-dvh"
-    >
+    <section data-menu-section className="relative h-dvh">
       <div
         className="absolute inset-0 bg-[url('/home-experience-background.jpg')] bg-cover bg-center bg-no-repeat opacity-30 pointer-events-none"
         aria-hidden="true"
@@ -164,7 +155,7 @@ export default function MenuPage() {
             <div className="pt-6 space-y-8">
               {searchQuery.trim() ? (
                 <div>
-                  <div className="mb-6">
+                  <div className="mb-6 mx-6">
                     <h2 className="text-2xl font-bold text-[#462305] pacifico-regular">
                       {t("searchResults")}
                     </h2>
@@ -178,17 +169,19 @@ export default function MenuPage() {
                           key={item.id}
                           image={item.image}
                           title={item.title}
-                          description={item.description}
+                          description={item.description || ""}
                           price={item.price}
+                          allergies={item.allergies}
+                          passiveAllergies={item.passiveAllergies}
                         />
                       ))}
                     </div>
                   ) : (
                     <div className="text-center py-12">
-                      <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#DC7129] to-[#F7C884] flex items-center justify-center opacity-50">
+                      <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#DC7129] to-[#F7C884] flex items-center justify-center opacity-90">
                         <span className="text-2xl">🔍</span>
                       </div>
-                      <p className="text-gray-500">
+                      <p className="text-black font-semibold">
                         {t("noItemsFound", { query: searchQuery })}
                       </p>
                     </div>

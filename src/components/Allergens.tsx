@@ -1,3 +1,4 @@
+import { X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 interface AllergensProps {
@@ -20,8 +21,8 @@ export default function Allergens({ onClose }: AllergensProps) {
     },
     {
       icon: "/allergens/egg.svg",
-      nameKey: "eggsName",
-      descKey: "eggsDescription",
+      nameKey: "eggName",
+      descKey: "eggDescription",
     },
     {
       icon: "/allergens/fish.svg",
@@ -86,14 +87,14 @@ export default function Allergens({ onClose }: AllergensProps) {
         {/* Header */}
         <div className="sticky top-0 bg-white rounded-t-2xl border-b border-gray-100 p-6">
           <div className="flex justify-between items-center">
-            <h2 className="text-2xl font-bold text-[#462305] pacifico-regular">
+            <h2 className="text-2xl font-bold text-[#462305]">
               {t("allergenInformation")}
             </h2>
             <button
               onClick={onClose}
-              className="text-gray-500 hover:text-[#462305] text-2xl font-bold transition-colors"
+              className="text-white bg-[#462305] text-2xl font-bold transition-colors border border-gray-300 hover:border-[#462305] rounded-full w-8 h-8 flex items-center justify-center"
             >
-              ×
+              <X />
             </button>
           </div>
           <p className="text-[#6B4423] mt-2">{t("allergenNotice")}</p>
@@ -128,10 +129,7 @@ export default function Allergens({ onClose }: AllergensProps) {
         {/* Footer */}
         <div className="p-6 bg-gradient-to-r from-[#DC7129] to-[#F7C884] rounded-b-2xl border-t-2 border-[#DC7129]">
           <p className="text-white text-center font-medium">
-            ⚠️ {t("crossContaminationWarning")}
-          </p>
-          <p className="text-white/90 text-center text-sm mt-1">
-            {t("crossContaminationNote")}
+            ⚠️ {t("crossContaminationNote")}
           </p>
         </div>
       </div>
