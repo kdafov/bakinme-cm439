@@ -82,8 +82,8 @@ export default function Allergens({ onClose }: AllergensProps) {
   ];
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 p-4 h-full">
-      <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative">
+    <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 p-4">
+      <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] sm:max-h-[85vh] overflow-y-auto relative">
         {/* X Button */}
         <button
           onClick={onClose}
