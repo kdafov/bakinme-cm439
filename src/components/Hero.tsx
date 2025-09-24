@@ -67,7 +67,7 @@ export default function Hero({ isActive, goMenu }: Props) {
       </div>
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-2 text-center">
-        <div className="mb-10 flex h-36 w-36 sm:h-36 sm:w-36 lg:h-64 lg:w-64 items-center justify-center rounded-full bg-white/85 backdrop-blur-sm border border-white/30 shadow-2xl p-2">
+        <div className="mb-10 flex h-40 w-40 sm:h-36 sm:w-36 lg:h-64 lg:w-64 items-center justify-center rounded-full bg-[#F6C783] backdrop-blur-sm border border-white/30 shadow-2xl p-2">
           <img
             src="/logo.svg"
             alt="Logo"
