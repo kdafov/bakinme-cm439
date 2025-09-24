@@ -79,7 +79,7 @@ export default function ItemInformation({
               {allergies.length > 0 && (
                 <div className="mb-3">
                   <h4 className="text-sm font-medium text-[#6B4423] mb-2">
-                    Contains:
+                    {t("contains")}:
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {allergies.map((allergen) => (
@@ -105,7 +105,7 @@ export default function ItemInformation({
               {passiveAllergies.length > 0 && (
                 <div>
                   <h4 className="text-sm font-medium text-[#6B4423] mb-2">
-                    May contain:
+                    {t("mayContain")}:
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {passiveAllergies.map((allergen) => (
@@ -119,7 +119,7 @@ export default function ItemInformation({
                           className="w-6 h-6 opacity-70"
                         />
                         <span className="text-sm text-yellow-800 capitalize">
-                          {allergen}
+                          {t(`${allergen}Name`)}
                         </span>
                       </div>
                     ))}

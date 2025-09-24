@@ -137,7 +137,7 @@ export default function MenuPage() {
   return (
     <section data-menu-section className="relative h-dvh">
       <div
-        className="absolute inset-0 bg-[url('/home-experience-background.jpg')] bg-cover bg-center bg-no-repeat opacity-30 pointer-events-none"
+        className="absolute inset-0 bg-[url('/home-experience-background.jpeg')] bg-cover bg-center bg-no-repeat opacity-30 pointer-events-none"
         aria-hidden="true"
       />
       <div className="relative h-full">
@@ -154,7 +154,7 @@ export default function MenuPage() {
           <div ref={menuContentRef} className="flex-1 overflow-auto">
             <div className="pt-6 space-y-8">
               {searchQuery.trim() ? (
-                <div>
+                <div className="mb-8">
                   <div className="mb-6 mx-6">
                     <h2 className="text-2xl font-bold text-[#462305] pacifico-regular">
                       {t("searchResults")}

@@ -60,14 +60,14 @@ export default function Hero({ isActive, goMenu }: Props) {
     >
       <div className="absolute inset-0 opacity-35">
         <img
-          src="/home-experience-background.jpg"
+          src="/home-experience-background.jpeg"
           alt="Background image"
           className="h-full w-full object-cover"
         />
       </div>
 
-      <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
-        <div className="mb-10 flex h-48 w-48 sm:h-56 sm:w-56 lg:h-64 lg:w-64 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm border border-white/30 shadow-2xl p-2">
+      <div className="relative z-10 flex h-full flex-col items-center justify-center px-2 text-center">
+        <div className="mb-10 flex h-36 w-36 sm:h-36 sm:w-36 lg:h-64 lg:w-64 items-center justify-center rounded-full bg-white/85 backdrop-blur-sm border border-white/30 shadow-2xl p-2">
           <img
             src="/logo.svg"
             alt="Logo"
@@ -75,11 +75,11 @@ export default function Hero({ isActive, goMenu }: Props) {
           />
         </div>
 
-        <h1 className="mb-8 text-5xl font-bold text-white sm:text-6xl lg:text-7xl fuzzy-bubbles-bold text-shadow-brand">
+        <h1 className="mb-5 text-5xl font-bold text-white sm:text-6xl lg:text-7xl fuzzy-bubbles-bold text-shadow-brand">
           BAKIN' ME CRAZY
         </h1>
         <div className="mb-12 max-w-2xl">
-          <p className="text-lg text-white/90 sm:text-xl lg:text-2xl leading-relaxed fuzzy-bubbles-regular text-shadow-brand-sub">
+          <p className="text-xl text-white sm:text-xl lg:text-2xl leading-relaxed fuzzy-bubbles-regular text-shadow-brand-sub">
             {t("subtitle")}
           </p>
         </div>
@@ -91,11 +91,11 @@ export default function Hero({ isActive, goMenu }: Props) {
       >
         <div className="flex flex-col items-center">
           <div className="flex flex-col space-y-1 animate-bounce">
-            <ChevronUp className="h-10 w-10 text-[#462305]/70" />
-            <ChevronUp className="h-10 w-10 text-[#462305]/50 -mt-7" />
-            <ChevronUp className="h-10 w-10 text-[#462305]/30 -mt-7" />
+            <ChevronUp className="h-10 w-10 text-[#462305]/90 drop-shadow-[0_0_8px_#ffffff]" />
+            <ChevronUp className="h-10 w-10 text-[#462305]/70 -mt-7 drop-shadow-[0_0_8px_#ffffff]" />
+            <ChevronUp className="h-10 w-10 text-[#462305]/50 -mt-7 drop-shadow-[0_0_8px_#ffffff]" />
           </div>
-          <p className="text-[#462305] text-2xl font-bold tracking-wide fuzzy-bubbles-bold">
+          <p className="text-[#462305] text-2xl font-bold tracking-wide fuzzy-bubbles-bold drop-shadow-[0_0_8px_#ffffff]">
             {t("swipeUpText")}
           </p>
         </div>

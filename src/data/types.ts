@@ -9,9 +9,9 @@ export type Allergen =
   | "molluscs"
   | "mustard"
   | "peanuts"
-  | "pinenuts"
+  | "nuts"
   | "sesame"
-  | "soybeans"
+  | "soy"
   | "sulphites";
 
 export type Category = {

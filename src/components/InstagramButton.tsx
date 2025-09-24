@@ -18,7 +18,7 @@ export default function InstagramButton() {
   return (
     <div className="absolute top-3 left-3 z-10">
       <a
-        href="https://instagram.com/bakinmecrazy"
+        href="https://www.instagram.com/bakinmecrazylpa?igsh=MWMwcW05dTViNDg0dA=="
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-white hover:bg-white/30 hover:text-pink-500 transition-all duration-300 hover:scale-105 px-4 py-2"

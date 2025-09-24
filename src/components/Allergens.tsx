@@ -1,4 +1,4 @@
-import { X } from "lucide-react";
+import { AlertTriangle, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 interface AllergensProps {
@@ -35,7 +35,7 @@ export default function Allergens({ onClose }: AllergensProps) {
       descKey: "peanutsDescription",
     },
     {
-      icon: "/allergens/soybeans.svg",
+      icon: "/allergens/soy.svg",
       nameKey: "soyName",
       descKey: "soyDescription",
     },
@@ -45,7 +45,7 @@ export default function Allergens({ onClose }: AllergensProps) {
       descKey: "milkDescription",
     },
     {
-      icon: "/allergens/pinenuts.svg",
+      icon: "/allergens/nuts.svg",
       nameKey: "nutsName",
       descKey: "nutsDescription",
     },
@@ -82,36 +82,38 @@ export default function Allergens({ onClose }: AllergensProps) {
   ];
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto border-2 border-[#DC7129]">
+    <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 p-4 h-full">
+      <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative">
+        {/* X Button */}
+        <button
+          onClick={onClose}
+          className="absolute top-3 right-3 z-10 w-8 h-8 bg-black bg-opacity-80 rounded-full flex items-center justify-center text-gray-600 hover:text-gray-800 hover:bg-opacity-100 transition-all duration-200 border border-black"
+        >
+          <X color="white" />
+        </button>
+
         {/* Header */}
-        <div className="sticky top-0 bg-white rounded-t-2xl border-b border-gray-100 p-6">
-          <div className="flex justify-between items-center">
-            <h2 className="text-2xl font-bold text-[#462305]">
-              {t("allergenInformation")}
-            </h2>
-            <button
-              onClick={onClose}
-              className="text-white bg-[#462305] text-2xl font-bold transition-colors border border-gray-300 hover:border-[#462305] rounded-full w-8 h-8 flex items-center justify-center"
-            >
-              <X />
-            </button>
-          </div>
-          <p className="text-[#6B4423] mt-2">{t("allergenNotice")}</p>
+        <div className="p-6 pb-4">
+          <h2 className="text-2xl font-bold text-[#462305] mt-6 mb-2">
+            {t("allergenInformation")}
+          </h2>
+          <p className="text-gray-700 text-base leading-relaxed">
+            {t("allergenNotice")}
+          </p>
         </div>
 
         {/* Allergens List */}
-        <div className="p-6 space-y-4">
+        <div className="px-6 pb-6 space-y-4">
           {allergens.map((allergen, index) => (
             <div
               key={index}
               className="flex items-start space-x-4 p-4 bg-gradient-to-r from-[#FFF8F0] to-[#FFF5E6] rounded-xl border-2 border-[#F7C884]"
             >
-              <div className="w-8 h-8 flex-shrink-0">
+              <div className="w-10 h-10 flex-shrink-0">
                 <img
                   src={allergen.icon}
                   alt={t(allergen.nameKey)}
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain rounded-full border-1 border-[#6B4423]"
                 />
               </div>
               <div className="flex-1">
@@ -124,13 +126,24 @@ export default function Allergens({ onClose }: AllergensProps) {
               </div>
             </div>
           ))}
-        </div>
 
-        {/* Footer */}
-        <div className="p-6 bg-gradient-to-r from-[#DC7129] to-[#F7C884] rounded-b-2xl border-t-2 border-[#DC7129]">
-          <p className="text-white text-center font-medium">
-            ⚠️ {t("crossContaminationNote")}
-          </p>
+          {/* Cross Contamination Warning */}
+          <div className="mt-6 p-4 bg-gradient-to-r from-[#FFF8F0] to-[#FFF5E6] rounded-xl border border-[#6B4423] mb-6">
+            <div className="flex flex-col items-center text-center">
+              <AlertTriangle className="w-8 h-8 text-[#6B4423] mb-2" />
+              <p className="text-[#6B4423] font-medium">
+                {t("crossContaminationNote")}
+              </p>
+            </div>
+          </div>
+
+          {/* Go Back Button */}
+          <button
+            onClick={onClose}
+            className="w-full bg-[#9A4A0B]/85 text-white font-bold py-3 px-6 rounded-xl transition-colors duration-200"
+          >
+            {t("goBack")}
+          </button>
         </div>
       </div>
     </div>
