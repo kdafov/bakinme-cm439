@@ -1,5 +1,5 @@
 {
-  "subtitle": "Là où la passion rencontre la perfection à chaque bouchée. Des douceurs artisanales qui vous feront délicieusement chavirer.",
+  "subtitle": "Un coin sucré sur roues, où la tradition artisanale se mêle à la créativité gastronomique",
   "swipeUpText": "Menu",
   "searchPlaceholder": "Rechercher dans le menu…",
   "findUs": "Découvrez où nous serons prochainement",
@@ -10,6 +10,7 @@
   "allergensButton": "Allergènes",
   "allergenInformation": "Informations sur les allergènes",
   "allergenNotice": "Veuillez informer notre personnel de toute allergie ou exigence alimentaire",
+  "allergensClickOnProductInfo": "Ceci est une information générale sur les allergies. Cliquez sur n'importe quel produit du menu pour voir ses allergènes spécifiques.",
   "glutenName": "Gluten",
   "glutenDescription": "Présent dans le blé, le seigle, l’orge et l’avoine. Présent dans la plupart des cookies, brownies et crêpes.",
   "eggName": "Œufs",
@@ -42,5 +43,8 @@
   "molluscsDescription": "Moules, huîtres, palourdes, escargots. Peuvent être présents dans certains ingrédients spécialisés.",
   "goBack": "Retour",
   "contains": "Contient",
-  "mayContain": "Peut contenir"
+  "mayContain": "Peut contenir",
+  "availabilityNoticeTitle": "Disponibilité des Produits",
+  "availabilityNoticeText": "Certains produits peuvent ne pas être disponibles dans la journée et le menu peut changer selon la disponibilité des ingrédients.",
+  "by": "par"
 }

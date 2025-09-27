@@ -21,11 +21,11 @@ export default function InstagramButton() {
         href="https://www.instagram.com/bakinmecrazylpa?igsh=MWMwcW05dTViNDg0dA=="
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-white hover:bg-white/30 hover:text-pink-500 transition-all duration-300 hover:scale-105 px-4 py-2"
+        className="flex items-center rounded-full backdrop-blur-sm border border-black text-black px-4 py-2"
         aria-label="Follow us on Instagram"
       >
         <InstagramIcon className="h-4 w-4" />
-        <span className="text-sm font-medium ml-2">{t("followUsShort")}</span>
+        <span className="text-sm font-semibold ml-2">{t("followUsShort")}</span>
       </a>
     </div>
   );

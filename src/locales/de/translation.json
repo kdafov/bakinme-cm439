@@ -1,5 +1,5 @@
 {
-  "subtitle": "Wo Leidenschaft auf Perfektion in jedem Bissen trifft. Handgefertigte Leckereien, die Sie köstlich verrückt machen.",
+  "subtitle": "Eine süße Ecke auf Rädern, wo handwerkliche Tradition auf Gourmet-Kreativität trifft",
   "swipeUpText": "Speisekarte",
   "searchPlaceholder": "Speisekarte durchsuchen…",
   "findUs": "Entdecken Sie unsere neuesten Kreationen",
@@ -10,6 +10,7 @@
   "allergensButton": "Allergene",
   "allergenInformation": "Allergen-Informationen",
   "allergenNotice": "Bitte informieren Sie unser Personal über Allergien oder Ernährungsanforderungen",
+  "allergensClickOnProductInfo": "Dies sind allgemeine Allergie-Informationen. Klicken Sie auf ein Menüprodukt, um dessen spezifische Allergene zu sehen.",
   "glutenName": "Gluten",
   "glutenDescription": "Enthalten in Weizen, Roggen, Gerste und Hafer. Vorhanden in den meisten Keksen, Brownies und Crêpes.",
   "eggName": "Eier",
@@ -42,5 +43,8 @@
   "molluscsDescription": "Muscheln, Austern, Venusmuscheln, Schnecken. Kann in einigen Spezialzutaten enthalten sein.",
   "goBack": "Zurück",
   "contains": "Enthält",
-  "mayContain": "Kann enthalten"
+  "mayContain": "Kann enthalten",
+  "availabilityNoticeTitle": "Verfügbarkeit der Produkte",
+  "availabilityNoticeText": "Einige Produkte sind möglicherweise nicht am Tag verfügbar und die Speisekarte kann sich je nach Verfügbarkeit der Zutaten ändern.",
+  "by": "von"
 }

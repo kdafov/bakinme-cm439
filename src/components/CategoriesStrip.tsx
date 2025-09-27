@@ -87,15 +87,13 @@ export default function CategoriesStrip({
   };
 
   return (
-    <div className="flex-shrink-0 bg-gradient-to-r from-[#F7C884]/35 to-[#DC7129]/45 py-3 border border-b-[#DC7129]/80">
+    <div className="flex-shrink-0 bg-white py-3 relative z-10">
       <div className="px-4">
         <div className="flex items-center space-x-4">
           <button
             onClick={handleSearchToggle}
             className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
-              isSearchMode
-                ? "text-[#462305]"
-                : "text-[#462305] hover:bg-[#DC7129]/10"
+              isSearchMode ? "text-black" : "text-black hover:bg-gray-200"
             }`}
           >
             {isSearchMode ? (
@@ -113,7 +111,7 @@ export default function CategoriesStrip({
                   value={searchQuery}
                   onChange={handleSearchChange}
                   placeholder={t("searchPlaceholder")}
-                  className="w-full px-3 py-1.5 bg-white/50 rounded-full focus:outline-none focus:bg-white/80 text-[#462305] placeholder:text-[#462305]/60 text-sm"
+                  className="w-full px-3 py-1.5 bg-gray-100 rounded-full focus:outline-none focus:bg-gray-200 text-black placeholder:text-gray-500 text-sm"
                   autoFocus
                 />
               </form>
@@ -130,8 +128,8 @@ export default function CategoriesStrip({
                       onClick={() => handleCategoryClick(category.id)}
                       className={`flex-shrink-0 px-4 py-2 text-sm font-medium transition-all duration-300 whitespace-nowrap rounded-full ${
                         activeCategory === category.id
-                          ? "text-white bg-[#462305] shadow-md"
-                          : "text-[#462305] drop-shadow-lg"
+                          ? "text-white bg-black/85 border border-white"
+                          : "text-black"
                       }`}
                     >
                       {category.name}

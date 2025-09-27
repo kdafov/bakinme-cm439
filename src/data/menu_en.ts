@@ -9,6 +9,7 @@ export const menu_EN: MenuObject = {
     { id: "crepes", name: "Crêpes" },
     { id: "compliments", name: "Compliments" },
     { id: "drinks", name: "Drinks" },
+    { id: "combos", name: "Combos" },
   ],
   sections: [
     {
@@ -17,7 +18,7 @@ export const menu_EN: MenuObject = {
       items: [
         {
           id: "la-de-siempre",
-          image: "image-placeholder.png",
+          image: "cookie.jpg",
           title: "The Classic",
           description: "Chocolate chips and sea salt flakes",
           price: 4.0,
@@ -45,7 +46,7 @@ export const menu_EN: MenuObject = {
         },
         {
           id: "dulce-alquimia",
-          image: "image-placeholder.png",
+          image: "products/sweet_alchemy.jpg",
           title: "Sweet Alchemy",
           description: "Almonds and coconut",
           price: 4.0,
@@ -64,7 +65,7 @@ export const menu_EN: MenuObject = {
         },
         {
           id: "esencia-fuego",
-          image: "image-placeholder.png",
+          image: "products/fire-essence.jpg",
           title: "Fire Essence",
           description: "Cayenne pepper and dark chocolate",
           price: 4.0,
@@ -418,6 +419,22 @@ export const menu_EN: MenuObject = {
           image: "image-placeholder.png",
           title: "Coffee with milk",
           price: 2.0,
+          allergies: [],
+          passiveAllergies: [],
+        },
+      ],
+    },
+    {
+      id: "combos",
+      title: "Combos",
+      items: [
+        {
+          id: "the-smookies",
+          image: "image-placeholder.png",
+          title: "The Smookies",
+          description:
+            "Smoothies to choose from + mini cookies with your favorite sauce",
+          price: 10.0,
           allergies: [],
           passiveAllergies: [],
         },

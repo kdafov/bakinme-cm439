@@ -1,5 +1,5 @@
 {
-  "subtitle": "Donde la pasión se encuentra con la perfección en cada bocado. Delicias artesanales que te volverán deliciosamente loco.",
+  "subtitle": "Un rincón dulce sobre ruedas, donde la tradición artesanal se fusiona con la creatividad gourmet",
   "swipeUpText": "Menú",
   "searchPlaceholder": "Buscar en el menú…",
   "findUs": "Descubre lo que preparamos",
@@ -10,13 +10,14 @@
   "allergensButton": "Alérgenos",
   "allergenInformation": "Información de Alérgenos",
   "allergenNotice": "Por favor informe a nuestro personal sobre cualquier alergia o requisito dietético",
+  "allergensClickOnProductInfo": "Esta es información general sobre alergias. Haz clic en cualquier producto del menú para ver sus alérgenos específicos.",
   "glutenName": "Gluten",
   "glutenDescription": "Presente en trigo, centeno, cebada y avena. Común en galletas, brownies y crepes.",
   "eggName": "Huevos",
   "eggDescription": "Utilizados en repostería y preparación de postres. Común en galletas, brownies y postres cremosos.",
   "milkName": "Leche",
   "milkDescription": "Incluyendo lactosa y productos lácteos. Presente en cremas, mascarpone y productos de chocolate.",
-  "nutsName": "Frutos Secos",
+  "nutsName": "Frutos de cáscara",
   "nutsDescription": "Frutos secos como almendras, avellanas, pistachos. Utilizados en varias galletas y postres.",
   "peanutsName": "Cacahuetes",
   "peanutsDescription": "Frutos secos que pueden estar presentes en productos de chocolate o por contaminación cruzada.",
@@ -42,5 +43,8 @@
   "molluscsDescription": "Mejillones, ostras, almejas, caracoles. Puede estar presente en algunos ingredientes especiales.",
   "goBack": "Volver",
   "contains": "Contiene",
-  "mayContain": "Puede contener"
+  "mayContain": "Puede contener",
+  "availabilityNoticeTitle": "Disponibilidad de Productos",
+  "availabilityNoticeText": "Algunos productos pueden no estar disponibles en el día y el menú puede cambiar según la disponibilidad de ingredientes.",
+  "by": "de"
 }

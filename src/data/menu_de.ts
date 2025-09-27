@@ -9,6 +9,7 @@ export const menu_DE: MenuObject = {
     { id: "crepes", name: "Crêpes" },
     { id: "compliments", name: "Extras" },
     { id: "drinks", name: "Getränke" },
+    { id: "combos", name: "Combos" },
   ],
   sections: [
     {
@@ -417,6 +418,22 @@ export const menu_DE: MenuObject = {
           image: "image-placeholder.png",
           title: "Kaffee mit Milch",
           price: 2.0,
+          allergies: [],
+          passiveAllergies: [],
+        },
+      ],
+    },
+    {
+      id: "combos",
+      title: "Combos",
+      items: [
+        {
+          id: "the-smookies",
+          image: "image-placeholder.png",
+          title: "The Smookies",
+          description:
+            "Smoothies zur Auswahl + Mini-Kekse mit deiner Lieblingssoße",
+          price: 10.0,
           allergies: [],
           passiveAllergies: [],
         },

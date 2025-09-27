@@ -4,13 +4,14 @@ import Banner from "./Banner";
 import CategoriesStrip from "./CategoriesStrip";
 import MenuSection from "./MenuSection";
 import MenuItem from "./MenuItem";
-import { menu_EN } from "../data/menu_en";
-import { menu_ES } from "../data/menu_es";
+import { menu_EN } from "@/data/menu_en";
+import { menu_ES } from "@/data/menu_es";
 import { menu_DE } from "@/data/menu_de";
 import { menu_IT } from "@/data/menu_it";
 import { menu_FR } from "@/data/menu_fr";
 import SocialFooter from "./Socials";
 import type { MenuEntry, MenuItem as MenuItemType } from "../data/types";
+import { Info } from "lucide-react";
 
 interface MenuItemData extends MenuItemType {
   sectionTitle?: string;
@@ -137,7 +138,8 @@ export default function MenuPage() {
   return (
     <section data-menu-section className="relative h-dvh">
       <div
-        className="absolute inset-0 bg-[url('/home-experience-background.jpeg')] bg-cover bg-center bg-no-repeat opacity-30 pointer-events-none"
+        className="absolute inset-0 bg-[url('/home-experience-background.jpeg')] bg-cover bg-center bg-no-repeat opacity-100 pointer-events-none"
+        style={{ top: "111px" }}
         aria-hidden="true"
       />
       <div className="relative h-full">
@@ -156,10 +158,22 @@ export default function MenuPage() {
               {searchQuery.trim() ? (
                 <div className="mb-8">
                   <div className="mb-6 mx-6">
-                    <h2 className="text-2xl font-bold text-[#462305] pacifico-regular">
+                    <h2
+                      className="text-2xl font-bold text-white pacifico-regular"
+                      style={{
+                        textShadow:
+                          "6px 6px 12px rgba(70, 35, 5, 1), 4px 4px 8px rgba(70, 35, 5, 1), 8px 8px 16px rgba(70, 35, 5, 1), 2px 2px 4px rgba(70, 35, 5, 1), 10px 10px 20px rgba(70, 35, 5, 0.9), 1px 1px 2px rgba(70, 35, 5, 1)",
+                      }}
+                    >
                       {t("searchResults")}
                     </h2>
-                    <div className="w-12 h-1 bg-gradient-to-r from-[#DC7129] to-[#F7C884] rounded-full mt-2"></div>
+                    <div
+                      className="w-12 h-1 bg-gradient-to-r from-[#fff] to-[#f3d9b5] rounded-full mt-2"
+                      style={{
+                        boxShadow:
+                          "4px 4px 8px rgba(0, 0, 0, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.9), 6px 6px 12px rgba(0, 0, 0, 0.7), 8px 8px 16px rgba(0, 0, 0, 0.5)",
+                      }}
+                    ></div>
                   </div>
 
                   {filteredItems.length > 0 ? (
@@ -181,7 +195,13 @@ export default function MenuPage() {
                       <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#DC7129] to-[#F7C884] flex items-center justify-center opacity-90">
                         <span className="text-2xl">🔍</span>
                       </div>
-                      <p className="text-black font-semibold">
+                      <p
+                        className="text-white text-lg font-semibold"
+                        style={{
+                          textShadow:
+                            "4px 4px 8px rgba(0, 0, 0, 1), 2px 2px 4px rgba(0, 0, 0, 1), 6px 6px 12px rgba(0, 0, 0, 0.8), 1px 1px 2px rgba(0, 0, 0, 1)",
+                        }}
+                      >
                         {t("noItemsFound", { query: searchQuery })}
                       </p>
                     </div>
@@ -197,6 +217,19 @@ export default function MenuPage() {
                       items={section.items}
                     />
                   ))}
+
+                  {/* Availability Notice */}
+                  <div className="bg-white rounded-xl border border-[#F7C884] mx-6 px-4 py-3 mb-8">
+                    <div className="flex items-start space-x-3">
+                      <Info className="w-5 h-5 text-[#6B4423] flex-shrink-0 mt-0.5" />
+                      <p className="text-[#6B4423] text-sm leading-relaxed">
+                        <strong className="font-bold">
+                          {t("availabilityNoticeTitle")}:
+                        </strong>{" "}
+                        {t("availabilityNoticeText")}
+                      </p>
+                    </div>
+                  </div>
 
                   <SocialFooter />
                 </>

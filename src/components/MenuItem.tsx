@@ -79,7 +79,7 @@ export default function MenuItem({
 
             {/* Description */}
             {description && (
-              <p className="text-gray-600 text-sm leading-tight mb-2">
+              <p className="text-gray-700 text-sm leading-tight mb-2">
                 {description}
               </p>
             )}
@@ -90,15 +90,15 @@ export default function MenuItem({
                 {/* Allergen Tag */}
                 {hasAllergens && (
                   <div className="flex-1">
-                    <span className="inline-block px-2 py-1 text-xs bg-gray-200 text-[#DC7129] rounded-full font-semibold">
-                      {t("allergensButton")}
+                    <span className="inline-block px-2 py-1 text-xs bg-[#DC7129]/90 text-white rounded-full font-bold">
+                      {t("allergensButton")}*
                     </span>
                   </div>
                 )}
 
                 {/* Price */}
                 <div className="flex-shrink-0">
-                  <span className="text-xl font-bold text-[#DC7129]">
+                  <span className="text-xl font-bold text-[#DC7129] tracking-wide">
                     €{price.toFixed(2)}
                   </span>
                 </div>

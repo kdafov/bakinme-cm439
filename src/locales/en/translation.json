@@ -1,5 +1,5 @@
 {
-  "subtitle": "Where passion meets perfection in every bite. Handcrafted treats that'll drive you deliciously wild.",
+  "subtitle": "A sweet corner on wheels, where artisanal tradition meets gourmet creativity",
   "swipeUpText": "Menu",
   "searchPlaceholder": "Search the menu…",
   "findUs": "Find what we're up to next",
@@ -10,6 +10,7 @@
   "allergensButton": "Allergens",
   "allergenInformation": "Allergens Information",
   "allergenNotice": "Please inform our staff of any allergies or dietary requirements",
+  "allergensClickOnProductInfo": "This is general allergy information. Click on any menu item to see its specific allergen information.",
   "glutenName": "Gluten",
   "glutenDescription": "Found in wheat, rye, barley, and oats. Present in most cookies, brownies, and crepes.",
   "eggName": "Eggs",
@@ -42,5 +43,8 @@
   "molluscsDescription": "Mussels, oysters, clams, snails. May be present in some specialty ingredients.",
   "goBack": "Go back",
   "contains": "Contains",
-  "mayContain": "May contain"
+  "mayContain": "May contain",
+  "availabilityNoticeTitle": "Availability of Products",
+  "availabilityNoticeText": "Some products may not be available on the day and the menu can change based on availability of ingredients.",
+  "by": "by"
 }

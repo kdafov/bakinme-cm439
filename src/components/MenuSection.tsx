@@ -25,7 +25,13 @@ export default function MenuSection({ id, title, items }: MenuSectionProps) {
       <div className="mb-6 mx-6">
         {isFirstSection ? (
           <div className="flex justify-between items-center">
-            <h2 className="text-2xl font-bold text-[#462305] pacifico-regular">
+            <h2
+              className="text-2xl font-bold text-white pacifico-regular"
+              style={{
+                textShadow:
+                  "6px 6px 12px rgba(70, 35, 5, 1), 4px 4px 8px rgba(70, 35, 5, 1), 8px 8px 16px rgba(70, 35, 5, 1), 2px 2px 4px rgba(70, 35, 5, 1), 10px 10px 20px rgba(70, 35, 5, 0.9), 1px 1px 2px rgba(70, 35, 5, 1)",
+              }}
+            >
               {title}
             </h2>
             <button
@@ -36,11 +42,25 @@ export default function MenuSection({ id, title, items }: MenuSectionProps) {
             </button>
           </div>
         ) : (
-          <h2 className="text-2xl font-bold text-[#462305] pacifico-regular">
+          <h2
+            className="text-2xl font-bold text-white pacifico-regular"
+            style={{
+              textShadow:
+                "6px 6px 12px rgba(70, 35, 5, 1), 4px 4px 8px rgba(70, 35, 5, 1), 8px 8px 16px rgba(70, 35, 5, 1), 2px 2px 4px rgba(70, 35, 5, 1), 10px 10px 20px rgba(70, 35, 5, 0.9), 1px 1px 2px rgba(70, 35, 5, 1)",
+            }}
+          >
             {title}
           </h2>
         )}
-        <div className="w-12 h-1 bg-gradient-to-r from-[#DC7129] to-[#F7C884] rounded-full mt-2"></div>
+        {
+          <div
+            className="w-12 h-1 bg-gradient-to-r from-[#fff] to-[#f3d9b5] rounded-full mt-2"
+            style={{
+              boxShadow:
+                "4px 4px 8px rgba(0, 0, 0, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.9), 6px 6px 12px rgba(0, 0, 0, 0.7), 8px 8px 16px rgba(0, 0, 0, 0.5)",
+            }}
+          ></div>
+        }
       </div>
 
       {/* Menu Items */}

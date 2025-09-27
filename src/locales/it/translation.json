@@ -1,5 +1,5 @@
 {
-  "subtitle": "Dove la passione incontra la perfezione in ogni morso. Dolcezze artigianali che ti faranno impazzire di gusto.",
+  "subtitle": "Un angolo dolce su ruote, dove la tradizione artigianale si fonde con la creatività gourmet",
   "swipeUpText": "Menù",
   "searchPlaceholder": "Cerca nel menù…",
   "findUs": "Scopri le nostre prossime creazioni",
@@ -10,6 +10,7 @@
   "allergensButton": "Allergeni",
   "allergenInformation": "Informazioni sugli Allergeni",
   "allergenNotice": "Si prega di informare il nostro staff di eventuali allergie o requisiti dietetici",
+  "allergensClickOnProductInfo": "Queste sono informazioni generali sulle allergie. Clicca su qualsiasi prodotto del menu per vedere i suoi allergeni specifici.",
   "glutenName": "Glutine",
   "glutenDescription": "Presente in grano, segale, orzo e avena. Comune nella maggior parte dei biscotti, brownies e crêpes.",
   "eggName": "Uova",
@@ -42,5 +43,8 @@
   "molluscsDescription": "Cozze, ostriche, vongole, lumache. Può essere presente in alcuni ingredienti speciali.",
   "goBack": "Torna indietro",
   "contains": "Contiene",
-  "mayContain": "Può contenere"
+  "mayContain": "Può contenere",
+  "availabilityNoticeTitle": "Disponibilità dei Prodotti",
+  "availabilityNoticeText": "Alcuni prodotti potrebbero non essere disponibili durante il giorno e il menu può cambiare in base alla disponibilità degli ingredienti.",
+  "by": "da"
 }

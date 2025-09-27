@@ -43,13 +43,15 @@ export default function SocialFooter() {
   ];
 
   return (
-    <div className="bg-gradient-to-r from-[#F7C884]/35 to-[#DC7129]/45 border-t border-[#DC7129]/20 py-8">
+    <div className="bg-gradient-to-b from-[#F7C884]/70 to-[#DC7129]/85 border-t border-[#DC7129]/20 py-8">
       <div className="px-6 text-center">
-        <h3 className="text-xl font-bold text-[#462305] mb-2 pacifico-regular">
+        <h3 className="text-2xl font-bold text-[#462305] mb-2 pacifico-regular">
           {t("findUs")}
         </h3>
 
-        <p className="text-black text-md mb-6">{t("followUs")}</p>
+        <p className="text-[#462305] text-lg mb-6 font-semibold">
+          {t("followUs")}
+        </p>
 
         <div className="flex justify-center space-x-6">
           {socialLinks.map((social) => {
@@ -60,7 +62,7 @@ export default function SocialFooter() {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`flex items-center justify-center w-12 h-12 rounded-full bg-white border border-[#DC7129]/20 text-[#462305] ${social.color} transition-all duration-300 hover:scale-110 hover:shadow-lg hover:border-[#DC7129]/40`}
+                className={`flex items-center justify-center w-12 h-12 rounded-full bg-white border-2 border-[#462305] text-[#462305] ${social.color} transition-all duration-300 hover:scale-110 hover:shadow-lg hover:border-[#DC7129]/40`}
                 aria-label={social.name}
               >
                 <IconComponent className="w-6 h-6" />
@@ -69,11 +71,11 @@ export default function SocialFooter() {
           })}
         </div>
 
-        <div className="mt-6 pt-4 border-t border-[#DC7129]/10">
-          <p className="text-xs text-black mb-1">
-            &copy; {new Date().getFullYear()} Bakin' Me Crazy
+        <div className="mt-6 pt-2">
+          <p className="text-sm text-black mb-1 font-semibold">
+            &copy; {new Date().getFullYear()} Bakin' Me Crazy | {t("by")}{" "}
+            davbyte.com
           </p>
-          <p className="text-xs text-black">by davbyte.com</p>
         </div>
       </div>
     </div>
