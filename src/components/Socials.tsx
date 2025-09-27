@@ -73,8 +73,7 @@ export default function SocialFooter() {
 
         <div className="mt-6 pt-2">
           <p className="text-sm text-black mb-1 font-semibold">
-            &copy; {new Date().getFullYear()} Bakin' Me Crazy | {t("by")}{" "}
-            davbyte.com
+            &copy; {new Date().getFullYear()} Bakin' Me Crazy
           </p>
         </div>
       </div>

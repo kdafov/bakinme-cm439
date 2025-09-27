@@ -83,7 +83,7 @@ export default function Allergens({ onClose }: AllergensProps) {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden relative flex flex-col">
+      <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] relative flex flex-col">
         {/* X Button */}
         <button
           onClick={onClose}
@@ -92,18 +92,19 @@ export default function Allergens({ onClose }: AllergensProps) {
           <X color="white" />
         </button>
 
-        {/* Header - Fixed */}
-        <div className="flex-shrink-0 p-6 pb-4">
-          <h2 className="text-2xl font-bold text-[#462305] mt-6 mb-2">
-            {t("allergenInformation")}
-          </h2>
-          <p className="text-gray-700 text-base leading-relaxed mb-4">
-            {t("allergenNotice")}
-          </p>
-        </div>
-
         {/* Scrollable Content */}
-        <div className="flex-1 overflow-y-auto px-6">
+        <div className="flex-1 overflow-y-auto p-6 pb-2">
+          {/* Header */}
+          <div className="pb-4">
+            <h2 className="text-2xl font-bold text-[#462305] mt-6 mb-2">
+              {t("allergenInformation")}
+            </h2>
+            <p className="text-gray-700 text-base leading-relaxed mb-4">
+              {t("allergenNotice")}
+            </p>
+          </div>
+
+          {/* Content */}
           <div className="space-y-4">
             {/* Info Box */}
             <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg">
@@ -150,8 +151,8 @@ export default function Allergens({ onClose }: AllergensProps) {
           </div>
         </div>
 
-        {/* Footer - Fixed */}
-        <div className="flex-shrink-0 p-6 pt-4">
+        {/* Fixed Footer */}
+        <div className="flex-shrink-0 p-6 pt-4 border-t border-gray-100">
           <button
             onClick={onClose}
             className="w-full bg-[#9A4A0B]/85 text-white font-bold py-3 px-6 rounded-xl transition-colors duration-200"

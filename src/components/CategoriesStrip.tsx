@@ -111,7 +111,8 @@ export default function CategoriesStrip({
                   value={searchQuery}
                   onChange={handleSearchChange}
                   placeholder={t("searchPlaceholder")}
-                  className="w-full px-3 py-1.5 bg-gray-100 rounded-full focus:outline-none focus:bg-gray-200 text-black placeholder:text-gray-500 text-sm"
+                  className="w-full px-3 py-1.5 bg-gray-100 rounded-full focus:outline-none focus:bg-gray-200 text-black placeholder:text-gray-500 text-base"
+                  style={{ fontSize: "16px" }}
                   autoFocus
                 />
               </form>
@@ -129,7 +130,7 @@ export default function CategoriesStrip({
                       className={`flex-shrink-0 px-4 py-2 text-sm font-medium transition-all duration-300 whitespace-nowrap rounded-full ${
                         activeCategory === category.id
                           ? "text-white bg-black/85 border border-white"
-                          : "text-[#6B4423]"
+                          : "text-[#462305]"
                       }`}
                     >
                       {category.name}

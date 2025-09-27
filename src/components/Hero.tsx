@@ -3,7 +3,7 @@ import { ChevronUp } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 type Props = {
-  isActive: boolean;
+  isActive?: boolean;
   goMenu: () => void;
 };
 
@@ -51,12 +51,22 @@ export default function Hero({ isActive, goMenu }: Props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isActive, goMenu]);
 
+  // const textShadowStyle = {
+  //   textShadow: `
+  //     4px 4px 8px rgba(0, 0, 0, 0.7),
+  //     2px 2px 4px rgba(0, 0, 0, 0.8),
+  //     6px 6px 12px rgba(0, 0, 0, 0.8)
+  //   `
+  //     .replace(/\s+/g, " ")
+  //     .trim(),
+  // };
+
   const textShadowStyle = {
     textShadow: `
-      4px 4px 8px rgba(0, 0, 0, 0.7),
-      2px 2px 4px rgba(0, 0, 0, 0.8),
-      6px 6px 12px rgba(0, 0, 0, 0.8)
-    `
+    2px 2px 4px rgba(0, 0, 0, 0.6),
+    1px 1px 2px rgba(0, 0, 0, 0.7),
+    3px 3px 6px rgba(0, 0, 0, 0.4)
+  `
       .replace(/\s+/g, " ")
       .trim(),
   };
@@ -95,11 +105,11 @@ export default function Hero({ isActive, goMenu }: Props) {
           alt="Background"
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/30 to-black/10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/35 to-black/15" />
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 flex h-full flex-col items-center justify-center px-2 text-center drop-shadow-[0_0_8px_#fff] pb-10">
+      <div className="relative z-10 flex h-full flex-col items-center justify-center px-2 text-center drop-shadow-[2px_12px_8px_#fff] pb-10">
         <img
           src="/logo.png"
           alt="Logo"
@@ -122,17 +132,21 @@ export default function Hero({ isActive, goMenu }: Props) {
         className="absolute bottom-4 left-1/2 -translate-x-1/2 transition-all duration-500 cursor-pointer"
       >
         <div className="flex flex-col items-center">
-          <div className="flex flex-col space-y-1 animate-bounce">
+          <div className="flex flex-col space-y-1">
             {arrowUpClasses.map((className, index) => (
               <ChevronUp
                 key={index}
-                className={className}
-                style={arrowShadowStyle}
+                className={`${className} animate-[slideUp_2s_ease-in-out_infinite]`}
+                style={{
+                  ...arrowShadowStyle,
+                  animationDelay: `${index * 0.3}s`,
+                  animation: `slideUp 1.5s ease-in-out infinite`,
+                }}
               />
             ))}
           </div>
           <p
-            className="text-white text-xl font-bold tracking-wide fuzzy-bubbles-bold"
+            className="text-white text-2xl font-bold tracking-wide fuzzy-bubbles-bold"
             style={menuTextShadowStyle}
           >
             {t("swipeUpText")}
