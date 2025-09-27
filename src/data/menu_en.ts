@@ -5,11 +5,11 @@ export const menu_EN: MenuObject = {
     { id: "cookies", name: "Cookies" },
     { id: "brownies", name: "Brownies" },
     { id: "desserts", name: "Creamy Desserts" },
+    { id: "combos", name: "Combos" },
     { id: "cookies-fries", name: "Cookie Fries" },
     { id: "crepes", name: "Crêpes" },
     { id: "compliments", name: "Compliments" },
     { id: "drinks", name: "Drinks" },
-    { id: "combos", name: "Combos" },
   ],
   sections: [
     {
@@ -209,6 +209,22 @@ export const menu_EN: MenuObject = {
           price: 6.0,
           allergies: ["gluten", "egg", "milk"],
           passiveAllergies: ["soy", "peanuts", "nuts"],
+        },
+      ],
+    },
+    {
+      id: "combos",
+      title: "Combos",
+      items: [
+        {
+          id: "the-smookies",
+          image: "image-placeholder.png",
+          title: "The Smookies",
+          description:
+            "Smoothies to choose from + mini cookies with your favorite sauce",
+          price: 10.0,
+          allergies: [],
+          passiveAllergies: [],
         },
       ],
     },
@@ -419,22 +435,6 @@ export const menu_EN: MenuObject = {
           image: "image-placeholder.png",
           title: "Coffee with milk",
           price: 2.0,
-          allergies: [],
-          passiveAllergies: [],
-        },
-      ],
-    },
-    {
-      id: "combos",
-      title: "Combos",
-      items: [
-        {
-          id: "the-smookies",
-          image: "image-placeholder.png",
-          title: "The Smookies",
-          description:
-            "Smoothies to choose from + mini cookies with your favorite sauce",
-          price: 10.0,
           allergies: [],
           passiveAllergies: [],
         },

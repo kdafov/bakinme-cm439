@@ -129,7 +129,7 @@ export default function CategoriesStrip({
                       className={`flex-shrink-0 px-4 py-2 text-sm font-medium transition-all duration-300 whitespace-nowrap rounded-full ${
                         activeCategory === category.id
                           ? "text-white bg-black/85 border border-white"
-                          : "text-black"
+                          : "text-[#6B4423]"
                       }`}
                     >
                       {category.name}

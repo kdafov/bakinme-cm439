@@ -5,11 +5,11 @@ export const menu_IT: MenuObject = {
     { id: "cookies", name: "Biscotti" },
     { id: "brownies", name: "Brownies" },
     { id: "desserts", name: "Dolci cremosi" },
+    { id: "combos", name: "Combos" },
     { id: "cookies-fries", name: "Bastoncini di biscotto" },
     { id: "crepes", name: "Crêpes" },
     { id: "compliments", name: "Aggiunte" },
     { id: "drinks", name: "Bevande" },
-    { id: "combos", name: "Combos" },
   ],
   sections: [
     {
@@ -209,6 +209,22 @@ export const menu_IT: MenuObject = {
           price: 6.0,
           allergies: ["gluten", "egg", "milk"],
           passiveAllergies: ["soy", "peanuts", "nuts"],
+        },
+      ],
+    },
+    {
+      id: "combos",
+      title: "Combos",
+      items: [
+        {
+          id: "the-smookies",
+          image: "image-placeholder.png",
+          title: "The Smookies",
+          description:
+            "Frullati a scelta + mini biscotti con la tua salsa preferita",
+          price: 10.0,
+          allergies: [],
+          passiveAllergies: [],
         },
       ],
     },
@@ -418,22 +434,6 @@ export const menu_IT: MenuObject = {
           image: "image-placeholder.png",
           title: "Caffè con latte",
           price: 2.0,
-          allergies: [],
-          passiveAllergies: [],
-        },
-      ],
-    },
-    {
-      id: "combos",
-      title: "Combos",
-      items: [
-        {
-          id: "the-smookies",
-          image: "image-placeholder.png",
-          title: "The Smookies",
-          description:
-            "Frullati a scelta + mini biscotti con la tua salsa preferita",
-          price: 10.0,
           allergies: [],
           passiveAllergies: [],
         },

@@ -3,13 +3,13 @@ import type { MenuObject } from "./types";
 export const menu_ES: MenuObject = {
   categories: [
     { id: "cookies", name: "Cookies" },
-    { id: "brownies", name: "Brownie" },
+    { id: "brownies", name: "Brownies" },
     { id: "desserts", name: "Postres cremosos" },
+    { id: "combos", name: "Combos" },
     { id: "cookies-fries", name: "Cookies fríes" },
     { id: "crepes", name: "Crepes" },
     { id: "compliments", name: "Extras" },
     { id: "drinks", name: "Bebidas" },
-    { id: "combos", name: "Combos" },
   ],
   sections: [
     {
@@ -208,6 +208,22 @@ export const menu_ES: MenuObject = {
           price: 6.0,
           allergies: ["gluten", "egg", "milk"],
           passiveAllergies: ["soy", "peanuts", "nuts"],
+        },
+      ],
+    },
+    {
+      id: "combos",
+      title: "Combos",
+      items: [
+        {
+          id: "the-smookies",
+          image: "image-placeholder.png",
+          title: "The Smookies",
+          description:
+            "Smoothies a elegir + mini cookies con tu salsa favorita",
+          price: 10.0,
+          allergies: [],
+          passiveAllergies: [],
         },
       ],
     },
@@ -417,22 +433,6 @@ export const menu_ES: MenuObject = {
           image: "image-placeholder.png",
           title: "Café con leche",
           price: 2.0,
-          allergies: [],
-          passiveAllergies: [],
-        },
-      ],
-    },
-    {
-      id: "combos",
-      title: "Combos",
-      items: [
-        {
-          id: "the-smookies",
-          image: "image-placeholder.png",
-          title: "The Smookies",
-          description:
-            "Smoothies a elegir + mini cookies con tu salsa favorita",
-          price: 10.0,
           allergies: [],
           passiveAllergies: [],
         },

@@ -53,8 +53,8 @@ export default function Hero({ isActive, goMenu }: Props) {
 
   const textShadowStyle = {
     textShadow: `
-      4px 4px 8px rgba(0, 0, 0, 1),
-      2px 2px 4px rgba(0, 0, 0, 1),
+      4px 4px 8px rgba(0, 0, 0, 0.7),
+      2px 2px 4px rgba(0, 0, 0, 0.8),
       6px 6px 12px rgba(0, 0, 0, 0.8)
     `
       .replace(/\s+/g, " ")
@@ -62,10 +62,26 @@ export default function Hero({ isActive, goMenu }: Props) {
   };
 
   const arrowUpClasses = [
-    "h-10 w-10 text-[#25150d]/95 drop-shadow-[0_0_8px_#ffffff]",
-    "h-10 w-10 text-[#25150d]/80 -mt-7 drop-shadow-[0_0_8px_#ffffff]",
-    "h-10 w-10 text-[#25150d]/70 -mt-7 drop-shadow-[0_0_8px_#ffffff]",
+    "h-10 w-10 text-white",
+    // "h-10 w-10 text-white -mt-7",
+    "h-10 w-10 text-white -mt-7",
   ];
+
+  const arrowShadowStyle = {
+    filter:
+      "drop-shadow(4px 4px 8px rgba(70, 35, 5, 1)) drop-shadow(2px 2px 4px rgba(70, 35, 5, 1)) drop-shadow(6px 6px 12px rgba(70, 35, 5, 0.8))",
+  };
+
+  const menuTextShadowStyle = {
+    textShadow: `
+      4px 4px 8px rgba(70, 35, 5, 1),
+      2px 2px 4px rgba(70, 35, 5, 1),
+      6px 6px 12px rgba(70, 35, 5, 0.8),
+      1px 1px 2px rgba(70, 35, 5, 1)
+    `
+      .replace(/\s+/g, " ")
+      .trim(),
+  };
 
   return (
     <section
@@ -83,14 +99,14 @@ export default function Hero({ isActive, goMenu }: Props) {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 flex h-full flex-col items-center justify-center px-2 text-center drop-shadow-[0_0_8px_#fff]">
+      <div className="relative z-10 flex h-full flex-col items-center justify-center px-2 text-center drop-shadow-[0_0_8px_#fff] pb-10">
         <img
           src="/logo.png"
           alt="Logo"
-          className="h-96 w-full object-contain mb-8"
+          className="w-full object-contain mb-4 h-84 sm:h-90 md:h-80 lg:h-96"
         />
 
-        <div className="mb-12 max-w-2xl">
+        <div className="mb-8 max-w-2xl">
           <p
             className="text-2xl text-white sm:text-xl lg:text-2xl leading-relaxed bakinme-font max-w-sm font-bold"
             style={textShadowStyle}
@@ -103,17 +119,21 @@ export default function Hero({ isActive, goMenu }: Props) {
       {/* Scroll Indicator */}
       <button
         onClick={goMenu}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 transition-all duration-500 cursor-pointer"
+        className="absolute bottom-4 left-1/2 -translate-x-1/2 transition-all duration-500 cursor-pointer"
       >
         <div className="flex flex-col items-center">
           <div className="flex flex-col space-y-1 animate-bounce">
             {arrowUpClasses.map((className, index) => (
-              <ChevronUp key={index} className={className} />
+              <ChevronUp
+                key={index}
+                className={className}
+                style={arrowShadowStyle}
+              />
             ))}
           </div>
           <p
-            className="text-[#25150d] text-2xl font-bold tracking-wide fuzzy-bubbles-bold drop-shadow-[0_0_8px_#000]"
-            style={{ textShadow: "0px 2px 6px rgba(255, 255, 255, 0.7)" }}
+            className="text-white text-xl font-bold tracking-wide fuzzy-bubbles-bold"
+            style={menuTextShadowStyle}
           >
             {t("swipeUpText")}
           </p>

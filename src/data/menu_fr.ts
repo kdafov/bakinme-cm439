@@ -5,11 +5,11 @@ export const menu_FR: MenuObject = {
     { id: "cookies", name: "Cookies" },
     { id: "brownies", name: "Brownies" },
     { id: "desserts", name: "Desserts crémeux" },
+    { id: "combos", name: "Combos" },
     { id: "cookies-fries", name: "Frites de cookies" },
     { id: "crepes", name: "Crêpes" },
     { id: "compliments", name: "Suppléments" },
     { id: "drinks", name: "Boissons" },
-    { id: "combos", name: "Combos" },
   ],
   sections: [
     {
@@ -208,6 +208,22 @@ export const menu_FR: MenuObject = {
           price: 6.0,
           allergies: ["gluten", "egg", "milk"],
           passiveAllergies: ["soy", "peanuts", "nuts"],
+        },
+      ],
+    },
+    {
+      id: "combos",
+      title: "Combos",
+      items: [
+        {
+          id: "the-smookies",
+          image: "image-placeholder.png",
+          title: "The Smookies",
+          description:
+            "Smoothies au choix + mini cookies avec ta sauce préférée",
+          price: 10.0,
+          allergies: [],
+          passiveAllergies: [],
         },
       ],
     },
@@ -417,22 +433,6 @@ export const menu_FR: MenuObject = {
           image: "image-placeholder.png",
           title: "Café au lait",
           price: 2.0,
-          allergies: [],
-          passiveAllergies: [],
-        },
-      ],
-    },
-    {
-      id: "combos",
-      title: "Combos",
-      items: [
-        {
-          id: "the-smookies",
-          image: "image-placeholder.png",
-          title: "The Smookies",
-          description:
-            "Smoothies au choix + mini cookies avec ta sauce préférée",
-          price: 10.0,
           allergies: [],
           passiveAllergies: [],
         },
