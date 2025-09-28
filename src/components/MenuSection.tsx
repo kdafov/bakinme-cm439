@@ -78,6 +78,16 @@ export default function MenuSection({ id, title, items }: MenuSectionProps) {
                 passiveAllergies={item.passiveAllergies}
               />
             );
+          } else if ("comingSoon" in item) {
+            return (
+              <MenuItem
+                key={item.id}
+                image={item.image}
+                title={item.title}
+                description={item.description}
+                unavailable={true}
+              />
+            );
           } else {
             return <MenuItem key={item.id} message={item.message} />;
           }

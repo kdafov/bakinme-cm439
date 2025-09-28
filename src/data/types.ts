@@ -19,6 +19,14 @@ export type Category = {
   name: string;
 };
 
+export interface ComingSoonItem {
+  id: string;
+  image?: string;
+  title: string;
+  description?: string;
+  comingSoon: true;
+}
+
 export type MenuItem = {
   id: string;
   image: string;
@@ -34,7 +42,7 @@ export type InfoBox = {
   message: string;
 };
 
-export type MenuEntry = MenuItem | InfoBox;
+export type MenuEntry = MenuItem | InfoBox | ComingSoonItem;
 
 export type MenuSection = {
   id: string;

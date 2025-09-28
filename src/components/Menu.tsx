@@ -231,6 +231,15 @@ export default function MenuPage() {
                     </div>
                   </div>
 
+                  {/* <div
+                    className="h-64 bg-[url('food-truck-transparent.png')] bg-cover bg-center pointer-events-none -mb-4"
+                    style={{
+                      filter:
+                        "drop-shadow(0px 0px 4px rgba(70, 35, 5, 0.8)) drop-shadow(0px 0px 12px rgba(255, 255, 255, 0.4)) drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.7))",
+                    }}
+                    aria-hidden="true"
+                  /> */}
+
                   <SocialFooter />
                 </>
               )}

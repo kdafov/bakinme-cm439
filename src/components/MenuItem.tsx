@@ -11,6 +11,7 @@ interface MenuItemProps {
   allergies?: Allergen[];
   passiveAllergies?: Allergen[];
   message?: string;
+  unavailable?: boolean;
 }
 
 export default function MenuItem({
@@ -21,14 +22,12 @@ export default function MenuItem({
   allergies = [],
   passiveAllergies = [],
   message,
+  unavailable = false,
 }: MenuItemProps) {
   const { t } = useTranslation();
   const [showOverlay, setShowOverlay] = useState(false);
   const hasAllergens = allergies.length > 0 || passiveAllergies.length > 0;
 
-  {
-    /* Description Item */
-  }
   if (message && price === undefined) {
     return (
       <div className="bg-white rounded-xl border border-[#F7C884] mx-6 px-4 py-1">
@@ -49,9 +48,6 @@ export default function MenuItem({
     );
   }
 
-  {
-    /* Menu Item */
-  }
   return (
     <>
       <div
@@ -59,7 +55,6 @@ export default function MenuItem({
         onClick={hasAllergens ? () => setShowOverlay(true) : undefined}
       >
         <div className="flex">
-          {/* Image - Full Height */}
           {image && (
             <div className="flex-shrink-0 w-20 bg-gradient-to-br from-[#DC7129] to-[#F7C884] overflow-hidden">
               <img
@@ -70,24 +65,19 @@ export default function MenuItem({
             </div>
           )}
 
-          {/* Content Area */}
-          <div className="flex-1 py-2 px-4 min-w-0">
-            {/* Title */}
+          <div className="flex-1 py-2 px-4 min-w-0 relative">
             <h3 className="font-semibold text-[#462305] text-lg leading-tight mb-2">
               {title}
             </h3>
 
-            {/* Description */}
             {description && (
               <p className="text-gray-700 text-sm leading-tight mb-2">
                 {description}
               </p>
             )}
 
-            {/* Price and Allergen Tag Row */}
             {price !== undefined && (
               <div className="flex items-center justify-between">
-                {/* Allergen Tag */}
                 {hasAllergens && (
                   <div className="flex-1">
                     <span className="inline-block px-2 py-1 text-xs bg-[#DC7129]/90 text-white rounded-full font-bold">
@@ -96,7 +86,6 @@ export default function MenuItem({
                   </div>
                 )}
 
-                {/* Price */}
                 <div className="flex-shrink-0">
                   <span className="text-xl font-bold text-[#DC7129] tracking-wide">
                     €{price.toFixed(2)}
@@ -104,11 +93,20 @@ export default function MenuItem({
                 </div>
               </div>
             )}
+
+            {unavailable && (
+              <div className="absolute inset-0 bg-black/45 flex items-center justify-center">
+                <div className="bg-[#DC7129] px-3 py-1 rounded-full shadow-md border">
+                  <p className="text-white font-bold text-xs">
+                    {t("notAvailable")}
+                  </p>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
 
-      {/* Item Information Overlay */}
       <ItemInformation
         isOpen={showOverlay}
         onClose={() => setShowOverlay(false)}

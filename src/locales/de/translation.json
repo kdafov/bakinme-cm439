@@ -45,5 +45,6 @@
   "contains": "Enthält",
   "mayContain": "Kann enthalten",
   "availabilityNoticeTitle": "Verfügbarkeit der Produkte",
-  "availabilityNoticeText": "Einige Produkte sind möglicherweise nicht am Tag verfügbar und die Speisekarte kann sich je nach Verfügbarkeit der Zutaten ändern."
+  "availabilityNoticeText": "Einige Produkte sind möglicherweise nicht am Tag verfügbar und die Speisekarte kann sich je nach Verfügbarkeit der Zutaten ändern.",
+  "notAvailable": "Nicht Verfügbar"
 }

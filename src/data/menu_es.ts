@@ -8,6 +8,7 @@ export const menu_ES: MenuObject = {
     { id: "combos", name: "Combos" },
     { id: "cookies-fries", name: "Cookies fríes" },
     { id: "crepes", name: "Crepes" },
+    { id: "cheesecakes", name: "Cheesecakes" },
     { id: "compliments", name: "Extras" },
     { id: "drinks", name: "Bebidas" },
   ],
@@ -18,7 +19,7 @@ export const menu_ES: MenuObject = {
       items: [
         {
           id: "la-de-siempre",
-          image: "cookie.jpg",
+          image: "products/la-de-siempre.jpeg",
           title: "La de siempre",
           description: "Gotas de chocolate y escamas de sal",
           price: 4.0,
@@ -27,7 +28,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "brisa-limon",
-          image: "image-placeholder.png",
+          image: "products/brisa-limon.jpeg",
           title: "Brisa de limón",
           description:
             "Chocolate blanco, limón, avellanas, jengibre y pistacho",
@@ -37,7 +38,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "amanecer-mediterraneo",
-          image: "image-placeholder.png",
+          image: "products/amanecer-mediterraneo.jpg",
           title: "Amanecer Mediterráneo",
           description: "Azafrán, naranja y coco",
           price: 4.5,
@@ -46,7 +47,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "dulce-alquimia",
-          image: "image-placeholder.png",
+          image: "products/dulce-alquimia.jpeg",
           title: "Dulce alquimia",
           description: "Almendras y coco",
           price: 4.0,
@@ -55,7 +56,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "pecado-chocolate",
-          image: "image-placeholder.png",
+          image: "products/pecado-chocolate.jpeg",
           title: "Pecado de chocolate",
           description: "Doble chocolate, café, ganache de chocolate y Baileys",
           price: 5.5,
@@ -64,7 +65,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "esencia-fuego",
-          image: "image-placeholder.png",
+          image: "products/esencia-fuego.jpeg",
           title: "Esencia de fuego",
           description: "Cayena y chocolate negro",
           price: 4.0,
@@ -73,7 +74,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "jardin-secreto",
-          image: "image-placeholder.png",
+          image: "products/jardin-secreto.jpeg",
           title: "Jardín secreto",
           description: "Lavanda y limón",
           price: 4.0,
@@ -82,7 +83,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "cookiemisu",
-          image: "image-placeholder.png",
+          image: "products/cookiemisu.jpeg",
           title: "Cookiemisú",
           description: "Crema de mascarpone y café",
           price: 5.5,
@@ -91,7 +92,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "caricia-meringa",
-          image: "image-placeholder.png",
+          image: "products/caricia-meringa.jpeg",
           title: "Caricia de meringa",
           description: "Crema de limón y meringa italiana",
           price: 5.5,
@@ -100,7 +101,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "cheesecookie",
-          image: "image-placeholder.png",
+          image: "products/cheesecookie.jpeg",
           title: "Cheesecookie",
           description: "Queso crema dulce y marmelada de fresa",
           price: 5.0,
@@ -115,7 +116,7 @@ export const menu_ES: MenuObject = {
       items: [
         {
           id: "mr-brownie",
-          image: "image-placeholder.png",
+          image: "products/mr-brownie.jpeg",
           title: "Mr Brownie",
           description: "Brownie cremoso",
           price: 4.5,
@@ -124,7 +125,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "dulce-contraste",
-          image: "image-placeholder.png",
+          image: "coming-soon.jpg",
           title: "Dulce contraste",
           description: "Brownie cremoso con caramelo salado",
           price: 5.0,
@@ -133,7 +134,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "brownies-donuts",
-          image: "image-placeholder.png",
+          image: "coming-soon.jpg",
           title: "Brownies donuts",
           description: "Brownie en forma de donut",
           price: 3.5,
@@ -148,7 +149,7 @@ export const menu_ES: MenuObject = {
       items: [
         {
           id: "velluto-mascarpone",
-          image: "image-placeholder.png",
+          image: "coming-soon.jpg",
           title: "Velluto di mascarpone",
           description: "Crema de mascarpone, crumble de cacao y avellanas",
           price: 5.0,
@@ -157,7 +158,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "mini-cheesecake-coco",
-          image: "image-placeholder.png",
+          image: "products/mini-cheesecake-coco.jpg",
           title: "Mini cheesecake",
           description: "Mini cheesecake con coco, mascarpone y frutos rojos",
           price: 6.5,
@@ -166,7 +167,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "mini-cheesecake-chocolate",
-          image: "image-placeholder.png",
+          image: "products/mini-cheesecake-chocolate.jpg",
           title: "Mini cheesecake",
           description: "Mini cheesecake con chocolate y avellanas",
           price: 6.5,
@@ -175,7 +176,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "mini-cheesecake-pistacho",
-          image: "image-placeholder.png",
+          image: "products/mini-cheesecake-pistacho.jpg",
           title: "Mini cheesecake",
           description: "Mini cheesecake con pistacho y lima",
           price: 6.5,
@@ -184,7 +185,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "mini-cheesecake-feta",
-          image: "image-placeholder.png",
+          image: "coming-soon.jpg",
           title: "Mini cheesecake",
           description: "Mini cheesecake con queso feta, miel y higos",
           price: 6.5,
@@ -193,7 +194,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "mini-cheesecake-gofio",
-          image: "image-placeholder.png",
+          image: "coming-soon.jpg",
           title: "Mini cheesecake",
           description: "Mini cheesecake con crumble de gofio y arándanos",
           price: 6.5,
@@ -202,7 +203,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "tres-leches",
-          image: "image-placeholder.png",
+          image: "coming-soon.jpg",
           title: "Tres leches",
           description: "Pistacho y coco",
           price: 6.0,
@@ -217,7 +218,7 @@ export const menu_ES: MenuObject = {
       items: [
         {
           id: "the-smookies",
-          image: "image-placeholder.png",
+          image: "coming-soon.jpg",
           title: "The Smookies",
           description:
             "Smoothies a elegir + mini cookies con tu salsa favorita",
@@ -233,7 +234,7 @@ export const menu_ES: MenuObject = {
       items: [
         {
           id: "snackitos",
-          image: "image-placeholder.png",
+          image: "coming-soon.jpg",
           title: "Snackitos",
           description: "Galletas de mantequilla (8 unidades más 1 salsa)",
           price: 6.5,
@@ -248,7 +249,7 @@ export const menu_ES: MenuObject = {
       items: [
         {
           id: "crepes-classica",
-          image: "image-placeholder.png",
+          image: "coming-soon.jpg",
           title: "Crepes clássica",
           description: "Crepe clásico con crema a elegir",
           price: 4.5,
@@ -257,7 +258,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "crepes-1-topping",
-          image: "image-placeholder.png",
+          image: "coming-soon.jpg",
           title: "Crepes & 1 topping",
           description: "Crepe con un topping adicional",
           price: 5.5,
@@ -266,7 +267,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "crepes-2-toppings",
-          image: "image-placeholder.png",
+          image: "coming-soon.jpg",
           title: "Crepes & 2 toppings",
           description: "Crepe con dos toppings adicionales",
           price: 6.0,
@@ -275,7 +276,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "crepes-3-toppings",
-          image: "image-placeholder.png",
+          image: "coming-soon.jpg",
           title: "Crepes & 3 toppings",
           description: "Crepe con tres toppings adicionales",
           price: 6.5,
@@ -294,12 +295,25 @@ export const menu_ES: MenuObject = {
       ],
     },
     {
+      id: "cheesecakes",
+      title: "Cheesecakes",
+      items: [
+        {
+          id: "test",
+          image: "coming-soon.jpg",
+          title: "Cheesecake",
+          description: "Cheesecake",
+          comingSoon: true,
+        },
+      ],
+    },
+    {
       id: "compliments",
       title: "Complementos",
       items: [
         {
           id: "salsa-pistacho",
-          image: "image-placeholder.png",
+          image: "logo_orange.png",
           title: "Salsa pistacho",
           price: 1.0,
           allergies: [],
@@ -307,7 +321,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "nutella",
-          image: "image-placeholder.png",
+          image: "logo_orange.png",
           title: "Nutella",
           price: 0.5,
           allergies: [],
@@ -315,7 +329,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "dulce-de-leche",
-          image: "image-placeholder.png",
+          image: "logo_orange.png",
           title: "Dulce de leche",
           price: 0.5,
           allergies: [],
@@ -323,7 +337,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "jeringa-nutella",
-          image: "image-placeholder.png",
+          image: "logo_orange.png",
           title: "Jeringa nutella",
           price: 1.0,
           allergies: [],
@@ -331,7 +345,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "jeringa-pistacchio",
-          image: "image-placeholder.png",
+          image: "logo_orange.png",
           title: "Jeringa pistacchio",
           price: 1.5,
           allergies: [],
@@ -339,7 +353,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "bola-helado",
-          image: "image-placeholder.png",
+          image: "logo_orange.png",
           title: "Bola helado",
           price: 1.0,
           allergies: [],
@@ -353,7 +367,7 @@ export const menu_ES: MenuObject = {
       items: [
         {
           id: "agua-sin-gas",
-          image: "image-placeholder.png",
+          image: "coming-soon.jpg",
           title: "Agua sin gas",
           price: 1.0,
           allergies: [],
@@ -361,7 +375,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "agua-con-gas",
-          image: "image-placeholder.png",
+          image: "coming-soon.jpg",
           title: "Agua con gas",
           price: 1.0,
           allergies: [],
@@ -369,7 +383,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "smoothie-oleada-tropical",
-          image: "image-placeholder.png",
+          image: "coming-soon.jpg",
           title: "Oleada tropical",
           description: "Smoothie de coco, menta y piña",
           price: 5.0,
@@ -378,7 +392,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "smoothie-sol-verano",
-          image: "image-placeholder.png",
+          image: "coming-soon.jpg",
           title: "Sol de verano",
           description: "Smoothie de jengibre, melocotón y melón",
           price: 5.0,
@@ -387,7 +401,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "smoothie-verde-exotico",
-          image: "image-placeholder.png",
+          image: "coming-soon.jpg",
           title: "Verde exótico",
           description: "Smoothie de aguacate, mango, coco y zumo de limón",
           price: 5.0,
@@ -396,7 +410,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "smoothie-berry-limon",
-          image: "image-placeholder.png",
+          image: "coming-soon.jpg",
           title: "Berry limón",
           description: "Smoothie de frutos de bosque y lima",
           price: 5.0,
@@ -405,7 +419,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "bebidas-varias",
-          image: "image-placeholder.png",
+          image: "coming-soon.jpg",
           title: "Bebidas varias",
           description: "Refrescos y otras bebidas",
           price: 1.5,
@@ -414,7 +428,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "cafe",
-          image: "image-placeholder.png",
+          image: "coming-soon.jpg",
           title: "Café",
           price: 1.2,
           allergies: [],
@@ -422,7 +436,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "cafe-largo",
-          image: "image-placeholder.png",
+          image: "coming-soon.jpg",
           title: "Café largo",
           price: 1.5,
           allergies: [],
@@ -430,7 +444,7 @@ export const menu_ES: MenuObject = {
         },
         {
           id: "cafe-con-leche",
-          image: "image-placeholder.png",
+          image: "coming-soon.jpg",
           title: "Café con leche",
           price: 2.0,
           allergies: [],

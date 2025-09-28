@@ -45,5 +45,6 @@
   "contains": "Contiene",
   "mayContain": "Può contenere",
   "availabilityNoticeTitle": "Disponibilità dei Prodotti",
-  "availabilityNoticeText": "Alcuni prodotti potrebbero non essere disponibili durante il giorno e il menu può cambiare in base alla disponibilità degli ingredienti."
+  "availabilityNoticeText": "Alcuni prodotti potrebbero non essere disponibili durante il giorno e il menu può cambiare in base alla disponibilità degli ingredienti.",
+  "notAvailable": "Non Disponibile"
 }
